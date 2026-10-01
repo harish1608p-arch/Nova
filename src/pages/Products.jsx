@@ -17,26 +17,59 @@ import { useShop } from "../context/ShopContext";
 
 import products, { categories } from "../data/products";
 
+import airProductImage from "../assets/navo-products/air.png";
+import loopProductImage from "../assets/navo-products/loop.png";
+import ringProductImage from "../assets/navo-products/ring.png";
+import visionProductImage from "../assets/navo-products/vision.png";
+import watchProductImage from "../assets/navo-products/watch.png";
+import oneProductImage from "../assets/navo-products/one.png";
+import studioProductImage from "../assets/navo-products/studio.png";
+import proProductImage from "../assets/navo-products/pro.png";
+
 import "./Products.css";
 
 
 /* =========================================================
-   PRODUCT VISUAL
+   PRODUCT IMAGES
+========================================================= */
 
-   Product images have been removed.
-   The visual area now keeps only the existing
-   background grid, glow and coordinate information.
+const productImages = {
+    1: airProductImage,
+    2: loopProductImage,
+    3: ringProductImage,
+    4: visionProductImage,
+    5: watchProductImage,
+    6: oneProductImage,
+    7: studioProductImage,
+    8: proProductImage,
+};
+
+
+/* =========================================================
+   PRODUCT VISUAL
+   Background grid, glow, product image and coordinates.
 ========================================================= */
 
 function ProductVisual({ product }) {
+    const image = productImages[product.id] || product.image;
+
     return (
         <div
-            className={`products-card-visual ${product.className || ""
-                }`}
+            className={`products-card-visual ${product.className || ""}`}
         >
             <div className="products-visual-grid" />
 
             <div className="products-visual-glow" />
+
+            {image && (
+                <img
+                    src={image}
+                    alt={product.name}
+                    className="products-real-product-image"
+                    loading="lazy"
+                    draggable="false"
+                />
+            )}
 
             <span className="products-coordinate">
                 N∆VO / {product.year}
@@ -63,9 +96,7 @@ function Products() {
     } = useShop();
 
 
-    /* =====================================================
-       FILTER PRODUCTS
-    ===================================================== */
+    /* FILTER PRODUCTS */
 
     const filteredProducts = useMemo(() => {
         return products.filter((product) => {
@@ -87,9 +118,7 @@ function Products() {
     }, [searchTerm, activeCategory]);
 
 
-    /* =====================================================
-       FORMAT PRICE
-    ===================================================== */
+    /* FORMAT PRICE */
 
     const formatPrice = (price) => {
         return `₹${price.toLocaleString("en-IN")}/-`;
@@ -99,9 +128,7 @@ function Products() {
     return (
         <main className="products-page">
 
-            {/* =====================================================
-                HERO
-            ===================================================== */}
+            {/* HERO */}
 
             <section className="products-hero">
 
@@ -109,69 +136,37 @@ function Products() {
 
                 <div className="products-hero-container">
 
-                    {/* =================================================
-                        BREADCRUMB
-                    ================================================= */}
+                    {/* BREADCRUMB */}
 
                     <motion.div
                         className="products-breadcrumb"
-                        initial={{
-                            opacity: 0,
-                            y: 15,
-                        }}
-                        animate={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        transition={{
-                            duration: 0.5,
-                        }}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
                     >
-
                         <Link to="/">
-                            <ArrowLeft
-                                size={15}
-                                strokeWidth={1.4}
-                            />
-
+                            <ArrowLeft size={15} strokeWidth={1.4} />
                             N∆VO
                         </Link>
 
                         <span>/</span>
 
                         <span>Products</span>
-
                     </motion.div>
 
 
-                    {/* =================================================
-                        HERO CONTENT
-                    ================================================= */}
+                    {/* HERO CONTENT */}
 
                     <motion.div
                         className="products-hero-content"
-                        initial={{
-                            opacity: 0,
-                            y: 35,
-                        }}
-                        animate={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        transition={{
-                            duration: 0.75,
-                            delay: 0.1,
-                        }}
+                        initial={{ opacity: 0, y: 35 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.75, delay: 0.1 }}
                     >
-
                         <div className="products-eyebrow">
-
                             <span />
-
                             N∆VO / 2026 COLLECTION
-
                         </div>
-
 
                         <h1>
                             Technology,
@@ -179,46 +174,27 @@ function Products() {
                             <em>for now.</em>
                         </h1>
 
-
                         <p>
                             Intelligent products designed around
                             <br />
                             the way technology fits into everyday life.
                         </p>
-
                     </motion.div>
 
 
-                    {/* =================================================
-                        HERO META
-                    ================================================= */}
+                    {/* HERO META */}
 
                     <motion.div
                         className="products-hero-meta"
-                        initial={{
-                            opacity: 0,
-                        }}
-                        animate={{
-                            opacity: 1,
-                        }}
-                        transition={{
-                            duration: 0.7,
-                            delay: 0.3,
-                        }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.7, delay: 0.3 }}
                     >
+                        <span>COLLECTION 01</span>
 
-                        <span>
-                            COLLECTION 01
-                        </span>
+                        <span>2026 → NOW</span>
 
-                        <span>
-                            2026 → NOW
-                        </span>
-
-                        <span>
-                            {products.length} PRODUCTS
-                        </span>
-
+                        <span>{products.length} PRODUCTS</span>
                     </motion.div>
 
                 </div>
@@ -226,49 +202,25 @@ function Products() {
             </section>
 
 
-            {/* =====================================================
-                PRODUCTS CONTENT
-            ===================================================== */}
+            {/* PRODUCTS CONTENT */}
 
             <section className="products-content">
 
                 <div className="products-content-container">
 
-
-                    {/* =================================================
-                        TOOLBAR
-                    ================================================= */}
+                    {/* TOOLBAR */}
 
                     <motion.div
                         className="products-toolbar"
-                        initial={{
-                            opacity: 0,
-                            y: 25,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.2,
-                        }}
-                        transition={{
-                            duration: 0.6,
-                        }}
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6 }}
                     >
-
-
-                        {/* =================================================
-                            SEARCH
-                        ================================================= */}
+                        {/* SEARCH */}
 
                         <div className="products-search">
-
-                            <Search
-                                size={18}
-                                strokeWidth={1.4}
-                            />
+                            <Search size={18} strokeWidth={1.4} />
 
                             <input
                                 type="text"
@@ -288,34 +240,21 @@ function Products() {
                                     Clear
                                 </button>
                             )}
-
                         </div>
 
-
-                        {/* =================================================
-                            FILTER
-                        ================================================= */}
+                        {/* FILTER */}
 
                         <button
                             type="button"
                             className="products-filter-button"
                         >
-
-                            <SlidersHorizontal
-                                size={17}
-                                strokeWidth={1.4}
-                            />
-
+                            <SlidersHorizontal size={17} strokeWidth={1.4} />
                             Filter
-
                         </button>
-
                     </motion.div>
 
 
-                    {/* =================================================
-                        CATEGORY FILTER
-                    ================================================= */}
+                    {/* CATEGORY FILTER */}
 
                     <div className="products-categories">
 
@@ -324,7 +263,6 @@ function Products() {
                         </div>
 
                         <div className="products-category-list">
-
                             {categories.map((category) => (
                                 <button
                                     key={category}
@@ -341,18 +279,14 @@ function Products() {
                                     {category}
                                 </button>
                             ))}
-
                         </div>
 
                     </div>
 
 
-                    {/* =================================================
-                        RESULTS
-                    ================================================= */}
+                    {/* RESULTS */}
 
                     <div className="products-results-bar">
-
                         <span>
                             {filteredProducts.length}{" "}
                             {filteredProducts.length === 1
@@ -365,13 +299,10 @@ function Products() {
                                 ? "ALL COLLECTION"
                                 : activeCategory.toUpperCase()}
                         </span>
-
                     </div>
 
 
-                    {/* =================================================
-                        PRODUCT GRID
-                    ================================================= */}
+                    {/* PRODUCT GRID */}
 
                     {filteredProducts.length > 0 ? (
 
@@ -382,52 +313,34 @@ function Products() {
                                 <motion.article
                                     key={product.id}
                                     className="products-card"
-                                    initial={{
-                                        opacity: 0,
-                                        y: 35,
-                                    }}
-                                    whileInView={{
-                                        opacity: 1,
-                                        y: 0,
-                                    }}
-                                    viewport={{
-                                        once: true,
-                                        amount: 0.1,
-                                    }}
+                                    initial={{ opacity: 0, y: 35 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.1 }}
                                     transition={{
                                         duration: 0.55,
                                         delay: index * 0.05,
                                     }}
                                 >
 
-
-                                    {/* =================================================
-                                        PRODUCT VISUAL
-                                    ================================================= */}
+                                    {/* PRODUCT VISUAL */}
 
                                     <div className="products-card-top">
 
-                                        <ProductVisual
-                                            product={product}
-                                        />
+                                        <ProductVisual product={product} />
 
-
-                                        {/* =================================================
-                                            WISHLIST
-                                        ================================================= */}
+                                        {/* WISHLIST */}
 
                                         <button
                                             type="button"
                                             className={`products-wishlist ${isInWishlist(product.id)
-                                                ? "active"
-                                                : ""
+                                                    ? "active"
+                                                    : ""
                                                 }`}
                                             onClick={() =>
                                                 toggleWishlist(product)
                                             }
                                             aria-label={`Add ${product.name} to wishlist`}
                                         >
-
                                             <Heart
                                                 size={18}
                                                 strokeWidth={1.4}
@@ -437,13 +350,9 @@ function Products() {
                                                         : "none"
                                                 }
                                             />
-
                                         </button>
 
-
-                                        {/* =================================================
-                                            CARD NUMBER
-                                        ================================================= */}
+                                        {/* CARD NUMBER */}
 
                                         <span className="products-card-number">
                                             {String(index + 1).padStart(2, "0")}
@@ -452,43 +361,24 @@ function Products() {
                                     </div>
 
 
-                                    {/* =================================================
-                                        PRODUCT INFORMATION
-                                    ================================================= */}
+                                    {/* PRODUCT INFORMATION */}
 
                                     <div className="products-card-info">
 
                                         <div className="products-card-meta">
-
-                                            <span>
-                                                {product.category}
-                                            </span>
-
-                                            <span>
-                                                {product.year}
-                                            </span>
-
+                                            <span>{product.category}</span>
+                                            <span>{product.year}</span>
                                         </div>
 
-
-                                        <h2>
-                                            {product.name}
-                                        </h2>
-
+                                        <h2>{product.name}</h2>
 
                                         <div className="products-card-type">
                                             {product.type}
                                         </div>
 
+                                        <p>{product.description}</p>
 
-                                        <p>
-                                            {product.description}
-                                        </p>
-
-
-                                        {/* =================================================
-                                            CARD FOOTER
-                                        ================================================= */}
+                                        {/* CARD FOOTER */}
 
                                         <div className="products-card-bottom">
 
@@ -496,13 +386,9 @@ function Products() {
                                                 {formatPrice(product.price)}
                                             </strong>
 
-
                                             <div className="products-card-actions">
 
-
-                                                {/* =================================================
-                                                    EXPLORE BUTTON
-                                                ================================================= */}
+                                                {/* EXPLORE */}
 
                                                 <button
                                                     type="button"
@@ -513,20 +399,14 @@ function Products() {
                                                         )
                                                     }
                                                 >
-
                                                     Explore
-
                                                     <ArrowUpRight
                                                         size={16}
                                                         strokeWidth={1.4}
                                                     />
-
                                                 </button>
 
-
-                                                {/* =================================================
-                                                    ADD TO CART
-                                                ================================================= */}
+                                                {/* ADD TO CART */}
 
                                                 <button
                                                     type="button"
@@ -535,16 +415,12 @@ function Products() {
                                                         addToCart(product)
                                                     }
                                                 >
-
                                                     <ShoppingBag
                                                         size={16}
                                                         strokeWidth={1.5}
                                                     />
 
-                                                    <span>
-                                                        Add to Cart
-                                                    </span>
-
+                                                    <span>Add to Cart</span>
                                                 </button>
 
                                             </div>
@@ -561,35 +437,18 @@ function Products() {
 
                     ) : (
 
-
-                        /* =================================================
-                           EMPTY STATE
-                        ================================================= */
+                        /* EMPTY STATE */
 
                         <motion.div
                             className="products-empty"
-                            initial={{
-                                opacity: 0,
-                                y: 20,
-                            }}
-                            animate={{
-                                opacity: 1,
-                                y: 0,
-                            }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
                         >
+                            <Search size={32} strokeWidth={1} />
 
-                            <Search
-                                size={32}
-                                strokeWidth={1}
-                            />
+                            <h2>No products found.</h2>
 
-                            <h2>
-                                No products found.
-                            </h2>
-
-                            <p>
-                                Try another search term or category.
-                            </p>
+                            <p>Try another search term or category.</p>
 
                             <button
                                 type="button"
@@ -600,63 +459,34 @@ function Products() {
                             >
                                 Reset filters
                             </button>
-
                         </motion.div>
 
                     )}
 
 
-                    {/* =================================================
-                        BOTTOM CTA
-                    ================================================= */}
+                    {/* BOTTOM CTA */}
 
                     <motion.div
                         className="products-bottom-cta"
-                        initial={{
-                            opacity: 0,
-                            y: 30,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.2,
-                        }}
-                        transition={{
-                            duration: 0.7,
-                        }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.7 }}
                     >
-
                         <div>
-
-                            <span>
-                                N∆VO / COLLECTION 01
-                            </span>
+                            <span>N∆VO / COLLECTION 01</span>
 
                             <h2>
                                 Premium technology,
                                 <br />
-                                <em>
-                                    without the premium barrier.
-                                </em>
+                                <em>without the premium barrier.</em>
                             </h2>
-
                         </div>
 
-
                         <Link to="/#future">
-
                             Explore Future
-
-                            <ArrowUpRight
-                                size={18}
-                                strokeWidth={1.3}
-                            />
-
+                            <ArrowUpRight size={18} strokeWidth={1.3} />
                         </Link>
-
                     </motion.div>
 
                 </div>
