@@ -1,0 +1,2159 @@
+/* =========================================================
+   Nâˆ†VO â€” FUTURE LAB
+   NEUROSPHERE / 2040+
+========================================================= */
+
+.navo-future {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 25%,
+            rgba(42, 53, 92, 0.55),
+            transparent 35%),
+        radial-gradient(circle at 80% 70%,
+            rgba(64, 34, 100, 0.32),
+            transparent 30%),
+        #050609;
+
+    color: #f5f7fb;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.future-background {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.future-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.18;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.045) 1px,
+            transparent 1px);
+
+    background-size: 70px 70px;
+
+    mask-image: linear-gradient(to bottom,
+            black,
+            transparent 82%);
+}
+
+.future-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+.future-glow-one {
+    width: 520px;
+    height: 520px;
+
+    top: 8%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(55, 92, 255, 0.15);
+}
+
+.future-glow-two {
+    width: 420px;
+    height: 420px;
+
+    right: -150px;
+    bottom: 10%;
+
+    background: rgba(125, 53, 255, 0.12);
+}
+
+.future-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(130, 150, 255, 0.12);
+
+    border-radius: 50%;
+
+    transform: rotate(-18deg);
+}
+
+.future-orbit-one {
+    width: 850px;
+    height: 280px;
+
+    left: 50%;
+    top: 30%;
+
+    transform:
+        translateX(-50%) rotate(-18deg);
+}
+
+.future-orbit-two {
+    width: 1100px;
+    height: 420px;
+
+    left: 50%;
+    top: 24%;
+
+    transform:
+        translateX(-50%) rotate(18deg);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.future-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1440px, 100%);
+
+    margin: 0 auto;
+
+    padding:
+        120px 58px 90px;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.future-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 80px;
+}
+
+.future-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.future-eyebrow span {
+    width: 32px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.future-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 0.14em;
+
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.future-status-dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #8ba5ff;
+
+    box-shadow:
+        0 0 12px rgba(139, 165, 255, 0.9);
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.future-hero {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 70px 1fr 230px;
+
+    align-items: end;
+
+    margin-bottom: 70px;
+}
+
+.future-index {
+    padding-bottom: 11px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.future-title {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Inter, Arial, sans-serif;
+
+    font-size: clamp(70px,
+            12vw,
+            180px);
+
+    font-weight: 300;
+
+    line-height: 0.77;
+
+    letter-spacing: -0.075em;
+
+    background:
+        linear-gradient(135deg,
+            #ffffff 5%,
+            #b9c5ff 48%,
+            #8b75ff 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.future-title span:last-child {
+    margin-left: 0.42em;
+}
+
+.future-subtitle {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    padding-bottom: 8px;
+}
+
+.future-subtitle p {
+    margin: 0;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 16px;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.02em;
+
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.future-subtitle>span {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================================
+   CONCEPT VISUAL
+========================================================= */
+
+.future-concept {
+    width: 100%;
+
+    margin-bottom: 80px;
+}
+
+.future-concept-frame {
+    position: relative;
+
+    width: 100%;
+    height: 580px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background:
+        radial-gradient(circle at 50% 48%,
+            rgba(74, 94, 180, 0.22),
+            transparent 24%),
+        radial-gradient(circle at 50% 50%,
+            rgba(20, 26, 54, 0.85),
+            rgba(4, 6, 11, 0.96) 65%);
+}
+
+.future-concept-frame::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            transparent 49.95%,
+            rgba(255, 255, 255, 0.08) 50%,
+            transparent 50.05%),
+        linear-gradient(0deg,
+            transparent 49.95%,
+            rgba(255, 255, 255, 0.05) 50%,
+            transparent 50.05%);
+
+    pointer-events: none;
+}
+
+.future-concept-label {
+    position: absolute;
+
+    top: 20px;
+    left: 22px;
+    right: 22px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================================
+   NEUROSPHERE OBJECT
+========================================================= */
+
+.future-device {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 390px;
+    height: 390px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.future-device-glow {
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(105, 132, 255, 0.6),
+            rgba(80, 77, 255, 0.16) 42%,
+            transparent 72%);
+
+    filter: blur(16px);
+
+    animation:
+        futurePulse 4s ease-in-out infinite;
+}
+
+.future-device-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(151, 169, 255, 0.35);
+
+    box-shadow:
+        0 0 30px rgba(100, 120, 255, 0.1);
+
+    animation:
+        futureRotate 18s linear infinite;
+}
+
+.future-device-ring-one {
+    width: 270px;
+    height: 270px;
+
+    transform: rotateX(65deg);
+}
+
+.future-device-ring-two {
+    width: 330px;
+    height: 170px;
+
+    transform: rotate(-20deg);
+
+    animation-duration: 24s;
+    animation-direction: reverse;
+}
+
+.future-device-ring-three {
+    width: 210px;
+    height: 350px;
+
+    transform: rotate(28deg);
+
+    animation-duration: 15s;
+}
+
+.future-device-core {
+    position: relative;
+
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 38% 30%,
+            rgba(255, 255, 255, 0.9),
+            rgba(144, 164, 255, 0.55) 18%,
+            rgba(44, 53, 104, 0.95) 48%,
+            #070914 74%);
+
+    border:
+        1px solid rgba(185, 198, 255, 0.6);
+
+    box-shadow:
+        0 0 45px rgba(92, 112, 255, 0.35),
+        inset 0 0 35px rgba(255, 255, 255, 0.12);
+}
+
+.future-device-core-inner {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            #ffffff,
+            #9db2ff 30%,
+            rgba(71, 93, 255, 0.5) 55%,
+            transparent 72%);
+
+    box-shadow:
+        0 0 28px rgba(145, 164, 255, 0.8);
+}
+
+.future-device-signal {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #b8c6ff;
+
+    box-shadow:
+        0 0 14px rgba(154, 174, 255, 0.95);
+
+    animation:
+        futureSignal 3s ease-in-out infinite;
+}
+
+.signal-one {
+    top: 58px;
+    right: 72px;
+}
+
+.signal-two {
+    left: 50px;
+    bottom: 100px;
+
+    animation-delay: 0.8s;
+}
+
+.signal-three {
+    right: 48px;
+    bottom: 80px;
+
+    animation-delay: 1.5s;
+}
+
+/* =========================================================
+   CONCEPT LABELS
+========================================================= */
+
+.future-concept-coordinate {
+    position: absolute;
+
+    left: 22px;
+    bottom: 20px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.14em;
+
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.future-concept-bottom {
+    position: absolute;
+
+    right: 22px;
+    bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 5px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 8px;
+
+    letter-spacing: 0.13em;
+
+    color: rgba(255, 255, 255, 0.28);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.future-description {
+    display: grid;
+    grid-template-columns: 40px 1fr minmax(300px, 650px);
+
+    align-items: start;
+
+    gap: 18px;
+
+    margin-bottom: 85px;
+}
+
+.future-description-number {
+    padding-top: 7px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 10px;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.future-description-line {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 12px;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.future-description-copy h3 {
+    margin: 0 0 20px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: clamp(30px, 4vw, 50px);
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+.future-description-copy p {
+    max-width: 510px;
+
+    margin: 0;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.future-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 90px;
+}
+
+.future-feature {
+    position: relative;
+
+    min-height: 245px;
+
+    padding: 28px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.future-feature:hover {
+    transform: translateY(-5px);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border-color:
+        rgba(170, 183, 255, 0.25);
+}
+
+.future-feature-number {
+    position: absolute;
+
+    top: 24px;
+    right: 24px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.future-feature>svg {
+    margin-bottom: 55px;
+
+    color: #aabaff;
+}
+
+.future-feature h4 {
+    margin: 0 0 10px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+
+    letter-spacing: -0.025em;
+}
+
+.future-feature p {
+    max-width: 270px;
+
+    margin: 0;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================================
+   MEMBERSHIP
+========================================================= */
+
+.future-membership {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 55px;
+
+    margin-bottom: 30px;
+
+    border:
+        1px solid rgba(151, 169, 255, 0.18);
+
+    background:
+        radial-gradient(circle at 75% 50%,
+            rgba(83, 92, 181, 0.16),
+            transparent 35%),
+        rgba(255, 255, 255, 0.025);
+}
+
+.future-membership-eyebrow {
+    margin-bottom: 20px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+
+    color: #9baeff;
+}
+
+.future-membership-copy h3 {
+    margin: 0 0 18px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: clamp(32px, 4vw, 58px);
+
+    font-weight: 300;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.05em;
+}
+
+.future-membership-copy p {
+    margin: 0;
+
+    max-width: 430px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.future-membership-action {
+    min-width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+}
+
+.future-price {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+
+    font-family: Inter, Arial, sans-serif;
+}
+
+.future-price span {
+    display: block;
+
+    position: absolute;
+
+    margin-top: -45px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.14em;
+
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.future-price strong {
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.future-price small {
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.future-membership-action button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+
+    background: #f3f5ff;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+
+    color: #11131a;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.future-membership-action button:hover {
+    transform: translateY(-2px);
+
+    background: #ffffff;
+}
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.future-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.1);
+}
+
+.future-bottom>span {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 0.14em;
+
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.future-bottom p {
+    margin: 0;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 19px;
+
+    line-height: 1.3;
+
+    letter-spacing: -0.025em;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.future-bottom a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 10px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.future-bottom a:hover {
+    background: #ffffff;
+    color: #11131a;
+}
+
+.future-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 65px;
+
+    font-family: Inter, Arial, sans-serif;
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes futurePulse {
+
+    0%,
+    100% {
+        transform: scale(0.92);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+@keyframes futureRotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes futureSignal {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+    .future-container {
+        padding:
+            100px 35px 75px;
+    }
+
+    .future-hero {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .future-subtitle {
+        grid-column: 2;
+
+        margin-top: 35px;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+    }
+
+    .future-concept-frame {
+        height: 500px;
+    }
+
+    .future-description {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .future-description-copy {
+        grid-column: 2;
+    }
+
+    .future-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .future-membership {
+        padding: 40px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+    .future-container {
+        padding:
+            80px 20px 60px;
+    }
+
+    .future-top {
+        margin-bottom: 60px;
+    }
+
+    .future-status {
+        display: none;
+    }
+
+    .future-eyebrow {
+        font-size: 9px;
+    }
+
+    .future-hero {
+        display: block;
+
+        margin-bottom: 50px;
+    }
+
+    .future-index {
+        margin-bottom: 30px;
+    }
+
+    .future-title {
+        font-size: clamp(55px,
+                18vw,
+                100px);
+
+        line-height: 0.8;
+    }
+
+    .future-title span:last-child {
+        margin-left: 0.22em;
+    }
+
+    .future-subtitle {
+        margin-top: 35px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+    .future-subtitle p {
+        font-size: 14px;
+    }
+
+    .future-subtitle>span {
+        text-align: right;
+    }
+
+    .future-concept {
+        margin-bottom: 65px;
+    }
+
+    .future-concept-frame {
+        height: 440px;
+    }
+
+    .future-device {
+        width: 290px;
+        height: 290px;
+    }
+
+    .future-device-ring-one {
+        width: 205px;
+        height: 205px;
+    }
+
+    .future-device-ring-two {
+        width: 250px;
+        height: 125px;
+    }
+
+    .future-device-ring-three {
+        width: 155px;
+        height: 270px;
+    }
+
+    .future-device-core {
+        width: 105px;
+        height: 105px;
+    }
+
+    .future-device-core-inner {
+        width: 34px;
+        height: 34px;
+    }
+
+    .future-description {
+        display: block;
+
+        margin-bottom: 65px;
+    }
+
+    .future-description-number {
+        margin-bottom: 15px;
+    }
+
+    .future-description-line {
+        margin: 0 0 28px;
+    }
+
+    .future-description-copy h3 {
+        font-size: 34px;
+    }
+
+    .future-description-copy p {
+        font-size: 12px;
+    }
+
+    .future-features {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 65px;
+    }
+
+    .future-feature {
+        min-height: 210px;
+    }
+
+    .future-membership {
+        display: block;
+
+        padding: 30px 24px;
+    }
+
+    .future-membership-copy h3 {
+        font-size: 36px;
+    }
+
+    .future-benefit-check {
+        display: inline-flex;
+        width: 14px;
+        margin-right: 7px;
+        color: #aabaff;
+    }
+
+    .future-membership-action {
+        min-width: 0;
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    .future-benefits {
+        margin-bottom: 8px;
+    }
+
+    .future-bottom {
+        display: block;
+    }
+
+    .future-bottom p {
+        margin-top: 20px;
+    }
+
+    .future-bottom a {
+        margin-top: 25px;
+    }
+
+    .future-scroll {
+        margin-top: 50px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+    .future-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .future-concept-frame {
+        height: 390px;
+    }
+
+    .future-device {
+        transform:
+            translate(-50%, -50%) scale(0.86);
+    }
+
+    .future-concept-coordinate {
+        left: 14px;
+        bottom: 14px;
+    }
+
+    .future-concept-bottom {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .future-membership-copy h3 {
+        font-size: 32px;
+    }
+}
+
+/* =========================================================
+   FUTURE CONCEPT CARD VISUALS
+   Abstract interface visuals â€” no external image assets.
+========================================================= */
+
+.future-feature {
+    overflow: hidden;
+    min-height: 360px;
+}
+
+.future-feature.active {
+    border-color: rgba(151, 169, 255, 0.32);
+    background:
+        radial-gradient(circle at 50% 42%,
+            rgba(77, 94, 190, 0.10),
+            transparent 48%),
+        rgba(255, 255, 255, 0.035);
+}
+
+.future-feature-visual {
+    position: relative;
+    width: calc(100% + 56px);
+    height: 190px;
+    margin: -2px -28px 22px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.future-feature-visual::before {
+    content: "";
+    position: absolute;
+    inset: 18px 28px;
+    border: 1px solid rgba(151, 169, 255, 0.06);
+    background:
+        linear-gradient(rgba(151, 169, 255, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(151, 169, 255, 0.025) 1px,
+            transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(circle, #000 15%, transparent 74%);
+    pointer-events: none;
+}
+
+.future-feature-visual::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(91, 111, 255, 0.07);
+    filter: blur(30px);
+    pointer-events: none;
+}
+
+/* =========================================================
+   01 â€” PRIVATE AUDIO
+========================================================= */
+
+.future-audio-visual {
+    color: #9eb1ff;
+}
+
+.audio-orbit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid rgba(142, 165, 255, 0.22);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.audio-orbit-one {
+    width: 138px;
+    height: 138px;
+}
+
+.audio-orbit-two {
+    width: 205px;
+    height: 70px;
+    transform:
+        translate(-50%, -50%) rotate(-22deg);
+    border-color: rgba(142, 165, 255, 0.12);
+}
+
+.audio-device {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 76px;
+    height: 76px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(184, 197, 255, 0.55);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 35% 28%,
+            rgba(255, 255, 255, 0.5),
+            rgba(101, 124, 255, 0.22) 25%,
+            rgba(9, 13, 30, 0.96) 68%);
+    box-shadow:
+        0 0 35px rgba(94, 119, 255, 0.22),
+        inset 0 0 22px rgba(255, 255, 255, 0.08);
+    z-index: 2;
+}
+
+.audio-device-core {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(206, 216, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 18px rgba(153, 174, 255, 0.7);
+}
+
+.audio-wave {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid rgba(142, 165, 255, 0.42);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.audio-wave-one {
+    width: 104px;
+    height: 104px;
+}
+
+.audio-wave-two {
+    width: 145px;
+    height: 145px;
+    opacity: 0.5;
+}
+
+.audio-wave-three {
+    width: 188px;
+    height: 188px;
+    opacity: 0.25;
+}
+
+.future-visual-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #b9c7ff;
+    box-shadow: 0 0 10px rgba(164, 184, 255, 0.9);
+}
+
+.particle-one {
+    left: 23%;
+    top: 39%;
+}
+
+.particle-two {
+    right: 25%;
+    top: 27%;
+}
+
+.particle-three {
+    right: 20%;
+    bottom: 31%;
+}
+
+/* =========================================================
+   02 â€” NEURAL TRANSLATION
+========================================================= */
+
+.future-neural-visual {
+    color: #b2a9ff;
+}
+
+.neural-network {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 205px;
+    height: 145px;
+    transform: translate(-50%, -50%);
+}
+
+.neural-node {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c7c1ff;
+    box-shadow:
+        0 0 8px rgba(177, 165, 255, 0.9),
+        0 0 22px rgba(111, 102, 255, 0.45);
+    z-index: 3;
+}
+
+.neural-node-one {
+    left: 8px;
+    top: 69px;
+}
+
+.neural-node-two {
+    left: 57px;
+    top: 24px;
+}
+
+.neural-node-three {
+    left: 57px;
+    top: 111px;
+}
+
+.neural-node-four {
+    left: 101px;
+    top: 50px;
+}
+
+.neural-node-five {
+    left: 101px;
+    top: 94px;
+}
+
+.neural-node-six {
+    right: 7px;
+    top: 70px;
+}
+
+.neural-line {
+    position: absolute;
+    height: 1px;
+    transform-origin: left center;
+    background: linear-gradient(90deg,
+            rgba(171, 160, 255, 0.18),
+            rgba(171, 160, 255, 0.65),
+            rgba(171, 160, 255, 0.18));
+}
+
+.neural-line-one {
+    left: 15px;
+    top: 72px;
+    width: 53px;
+    transform: rotate(-42deg);
+}
+
+.neural-line-two {
+    left: 15px;
+    top: 72px;
+    width: 53px;
+    transform: rotate(42deg);
+}
+
+.neural-line-three {
+    left: 64px;
+    top: 30px;
+    width: 45px;
+    transform: rotate(27deg);
+}
+
+.neural-line-four {
+    left: 64px;
+    top: 114px;
+    width: 45px;
+    transform: rotate(-27deg);
+}
+
+.neural-line-five {
+    left: 108px;
+    top: 54px;
+    width: 70px;
+    transform: rotate(17deg);
+}
+
+.neural-pulse {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 105px;
+    height: 105px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(166, 154, 255, 0.12);
+    border-radius: 50%;
+    animation: neuralPulse 3.5s ease-out infinite;
+}
+
+/* =========================================================
+   03 â€” SPATIAL EXPERIENCE
+========================================================= */
+
+.future-spatial-visual {
+    color: #9bbaff;
+}
+
+.spatial-floor {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    width: 230px;
+    height: 90px;
+    transform:
+        translateX(-50%) perspective(400px) rotateX(63deg);
+    border:
+        1px solid rgba(127, 166, 255, 0.16);
+    background-image:
+        linear-gradient(rgba(127, 166, 255, 0.1) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(127, 166, 255, 0.1) 1px,
+            transparent 1px);
+    background-size: 24px 24px;
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            #000 40%,
+            transparent);
+}
+
+.spatial-cube {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    width: 76px;
+    height: 76px;
+    transform:
+        translate(-50%, -50%) rotateX(55deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+}
+
+.cube-face {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(166, 194, 255, 0.55);
+    background:
+        linear-gradient(135deg,
+            rgba(111, 147, 255, 0.15),
+            rgba(70, 76, 150, 0.025));
+    box-shadow:
+        inset 0 0 20px rgba(119, 145, 255, 0.07);
+}
+
+.cube-face-front {
+    transform: translateZ(38px);
+}
+
+.cube-face-side {
+    transform:
+        rotateY(90deg) translateZ(38px);
+}
+
+.cube-face-top {
+    transform:
+        rotateX(90deg) translateZ(38px);
+}
+
+.spatial-orbit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid rgba(137, 170, 255, 0.18);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spatial-orbit-one {
+    width: 175px;
+    height: 66px;
+    transform:
+        translate(-50%, -50%) rotate(-24deg);
+}
+
+.spatial-orbit-two {
+    width: 215px;
+    height: 86px;
+    transform:
+        translate(-50%, -50%) rotate(28deg);
+    opacity: 0.55;
+}
+
+.spatial-point {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #b7caff;
+    box-shadow: 0 0 12px rgba(145, 176, 255, 0.9);
+}
+
+.spatial-point-one {
+    left: 24%;
+    top: 34%;
+}
+
+.spatial-point-two {
+    right: 22%;
+    bottom: 30%;
+}
+
+/* =========================================================
+   FEATURE CARD TEXT POSITION
+========================================================= */
+
+.future-feature>h4,
+.future-feature>p {
+    position: relative;
+    z-index: 5;
+}
+
+.future-feature>h4 {
+    margin-top: 0;
+}
+
+.future-feature>p {
+    position: relative;
+}
+
+/* =========================================================
+   ACTIVE STATE
+========================================================= */
+
+.future-feature.active .future-feature-visual::after {
+    background: rgba(111, 131, 255, 0.11);
+}
+
+.future-feature.active .audio-device {
+    box-shadow:
+        0 0 45px rgba(94, 119, 255, 0.34),
+        inset 0 0 22px rgba(255, 255, 255, 0.1);
+}
+
+.future-feature.active .neural-pulse {
+    animation-duration: 2.2s;
+}
+
+.future-feature.active .spatial-cube {
+    filter: drop-shadow(0 0 15px rgba(116, 150, 255, 0.24));
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes futurePulse {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: scale(0.92);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+}
+
+@keyframes futureRotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes futureSignal {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.75);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+@keyframes neuralPulse {
+    0% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(0.55);
+    }
+
+    70% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.45);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.55);
+    }
+}
+
+@media (max-width: 900px) {
+    .future-feature {
+        min-height: 335px;
+    }
+
+    .future-feature-visual {
+        height: 175px;
+    }
+}
+
+@media (max-width: 700px) {
+    .future-features {
+        grid-template-columns: 1fr;
+    }
+
+    .future-feature {
+        min-height: 330px;
+    }
+
+    .future-feature-visual {
+        height: 175px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .future-device-glow,
+    .future-device-ring,
+    .future-device-signal,
+    .neural-pulse {
+        animation: none;
+    }
+}
+
+/* =========================================================
+   Nâˆ†VO FUTURE â€” HARDWARE EXPLANATION
+========================================================= */
+
+.future-hardware {
+    margin-bottom: 78px;
+    padding: 48px;
+    border: 1px solid rgba(151, 169, 255, 0.16);
+    background:
+        radial-gradient(circle at 78% 20%,
+            rgba(82, 94, 190, 0.10),
+            transparent 34%),
+        rgba(255, 255, 255, 0.018);
+}
+
+.future-hardware-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    align-items: end;
+    gap: 70px;
+    margin-bottom: 44px;
+}
+
+.future-hardware-eyebrow {
+    display: block;
+    margin-bottom: 17px;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: #9baeff;
+}
+
+.future-hardware-heading h3 {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    font-size: clamp(34px, 4vw, 58px);
+    line-height: 0.98;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+}
+
+.future-hardware-heading>p {
+    max-width: 430px;
+    margin: 0 0 3px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.43);
+}
+
+.future-hardware-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.future-hardware-card {
+    position: relative;
+    min-width: 0;
+    min-height: 450px;
+    padding: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.018);
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.future-hardware-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(170, 183, 255, 0.28);
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.future-hardware-number {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    z-index: 5;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.future-hardware-visual {
+    position: relative;
+    height: 205px;
+    margin: 0 -4px 26px;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(126, 151, 255, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(126, 151, 255, 0.035) 1px,
+            transparent 1px);
+    background-size: 25px 25px;
+}
+
+.future-hardware-visual::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 155px;
+    height: 155px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(80, 105, 230, 0.08);
+    filter: blur(28px);
+}
+
+.future-hardware-type {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 8px;
+    letter-spacing: 0.17em;
+    color: #9baeff;
+}
+
+.future-hardware-card h4 {
+    margin: 0 0 12px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+}
+
+.future-hardware-card>p {
+    max-width: 310px;
+    min-height: 92px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.future-hardware-use {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 22px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.future-hardware-use span {
+    font-size: 7px;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.future-hardware-use strong {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.70);
+}
+
+/* =========================================================
+   HEADPHONES VISUAL
+========================================================= */
+
+.future-headphone-visual {
+    color: #aebeff;
+}
+
+.headphone-arc {
+    position: absolute;
+    left: 50%;
+    top: 51%;
+    width: 116px;
+    height: 105px;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(177, 195, 255, 0.58);
+    border-bottom-color: transparent;
+    border-radius: 58px 58px 30px 30px;
+    box-shadow: 0 0 25px rgba(97, 126, 255, 0.13);
+}
+
+.headphone-cup {
+    position: absolute;
+    top: 53%;
+    width: 30px;
+    height: 48px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(190, 204, 255, 0.65);
+    border-radius: 13px;
+    background: linear-gradient(145deg, rgba(90, 115, 210, 0.25), rgba(6, 10, 20, 0.95));
+    box-shadow: inset 0 0 15px rgba(180, 195, 255, 0.08);
+}
+
+.headphone-cup-left {
+    left: calc(50% - 72px);
+}
+
+.headphone-cup-right {
+    right: calc(50% - 72px);
+}
+
+.headphone-signal {
+    position: absolute;
+    left: 50%;
+    top: 51%;
+    border: 1px solid rgba(146, 171, 255, 0.30);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headphone-signal-one {
+    width: 175px;
+    height: 90px;
+}
+
+.headphone-signal-two {
+    width: 215px;
+    height: 120px;
+    opacity: 0.45;
+}
+
+/* =========================================================
+   BAND VISUAL
+========================================================= */
+
+.future-band-visual {
+    color: #b4acff;
+}
+
+.band-ring {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 155px;
+    height: 67px;
+    transform: translate(-50%, -50%) rotate(-18deg);
+    border: 13px solid rgba(150, 157, 245, 0.20);
+    border-radius: 50%;
+    box-shadow:
+        0 0 22px rgba(105, 111, 255, 0.20),
+        inset 0 0 16px rgba(185, 190, 255, 0.12);
+}
+
+.band-core {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(197, 194, 255, 0.65);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(110, 110, 230, 0.35), rgba(7, 10, 22, 0.95));
+}
+
+.band-signal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid rgba(169, 157, 255, 0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.band-signal-one {
+    width: 190px;
+    height: 115px;
+}
+
+.band-signal-two {
+    width: 235px;
+    height: 145px;
+    opacity: 0.45;
+}
+
+.band-node {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c5c0ff;
+    box-shadow: 0 0 13px rgba(170, 160, 255, 0.8);
+}
+
+.band-node-one {
+    left: 23%;
+    top: 35%;
+}
+
+.band-node-two {
+    right: 23%;
+    top: 42%;
+}
+
+.band-node-three {
+    right: 29%;
+    bottom: 27%;
+}
+
+/* =========================================================
+   RING VISUAL
+========================================================= */
+
+.future-ring-visual {
+    color: #a6bcff;
+}
+
+.future-ring-body {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 106px;
+    height: 106px;
+    transform: translate(-50%, -50%) rotateX(58deg) rotateZ(-22deg);
+    border: 13px solid rgba(151, 176, 255, 0.24);
+    border-radius: 50%;
+    box-shadow:
+        0 0 25px rgba(98, 126, 255, 0.22),
+        inset 0 0 20px rgba(190, 205, 255, 0.08);
+}
+
+.future-ring-core {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 28px;
+    height: 28px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(206, 218, 255, 0.78);
+    border-radius: 50%;
+    background: rgba(55, 78, 155, 0.25);
+}
+
+.future-ring-orbit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid rgba(133, 164, 255, 0.22);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.future-ring-orbit-one {
+    width: 205px;
+    height: 75px;
+    transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+.future-ring-orbit-two {
+    width: 235px;
+    height: 105px;
+    transform: translate(-50%, -50%) rotate(25deg);
+    opacity: 0.55;
+}
+
+/* =========================================================
+   RESPONSIVE HARDWARE SECTION
+========================================================= */
+
+@media (max-width: 980px) {
+    .future-hardware {
+        padding: 34px;
+    }
+
+    .future-hardware-heading {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .future-hardware-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .future-hardware-card {
+        min-height: 0;
+    }
+
+    .future-hardware-card>p {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .future-hardware {
+        padding: 25px 20px;
+        margin-bottom: 55px;
+    }
+
+    .future-hardware-heading {
+        margin-bottom: 30px;
+    }
+
+    .future-hardware-heading h3 {
+        font-size: 38px;
+    }
+
+    .future-hardware-heading>p {
+        font-size: 11px;
+    }
+
+    .future-hardware-card {
+        padding: 20px;
+    }
+
+    .future-hardware-visual {
+        height: 180px;
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 420px) {
+    .future-hardware {
+        padding: 22px 16px;
+    }
+
+    .future-hardware-heading h3 {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,171 @@
+/* =========================================================
+   N∆VO — APPLICATION FOUNDATION
+   STEP 1 → STEP 2
+========================================================= */
+
+
+/* =========================================================
+   APP ROOT
+========================================================= */
+
+.navo-app {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: clip;
+
+  background: var(--navo-black);
+  color: var(--navo-text-primary);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.navo-app main {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   GLOBAL SECTION FOUNDATION
+========================================================= */
+
+.navo-app section {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   DARK SURFACE
+========================================================= */
+
+.navo-dark-section {
+  background: var(--navo-black);
+  color: var(--navo-text-primary);
+}
+
+
+/* =========================================================
+   GRAPHITE SURFACE
+========================================================= */
+
+.navo-graphite-section {
+  background: var(--navo-graphite);
+  color: var(--navo-text-primary);
+}
+
+
+/* =========================================================
+   LIGHT SURFACE
+   Used later for the 1997 side of the timeline.
+========================================================= */
+
+.navo-light-section {
+  background: var(--navo-off-white);
+  color: var(--navo-black);
+}
+
+
+/* =========================================================
+   PAGE TRANSITION FOUNDATION
+   Framer Motion sections can use this class later.
+========================================================= */
+
+.navo-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   CONTENT LAYER
+========================================================= */
+
+.navo-content {
+  position: relative;
+  z-index: var(--navo-z-content);
+}
+
+
+/* =========================================================
+   VISUAL LAYER
+========================================================= */
+
+.navo-visual {
+  position: relative;
+  z-index: var(--navo-z-base);
+}
+
+
+/* =========================================================
+   OVERLAY LAYER
+========================================================= */
+
+.navo-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: var(--navo-z-overlay);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GLASS SURFACE FOUNDATION
+========================================================= */
+
+.navo-glass {
+  background: rgba(8, 10, 15, 0.68);
+
+  border: 1px solid var(--navo-border-dark);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================================
+   INTERACTIVE FOUNDATION
+========================================================= */
+
+.navo-interactive {
+  transition:
+    transform var(--navo-transition-base),
+    border-color var(--navo-transition-base),
+    background-color var(--navo-transition-base),
+    opacity var(--navo-transition-base);
+}
+
+.navo-interactive:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navo-interactive {
+    transition: none;
+  }
+
+  .navo-interactive:hover {
+    transform: none;
+  }
+}

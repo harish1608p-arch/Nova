@@ -1,0 +1,616 @@
+/* =========================================================
+   N∆VO — CART DRAWER
+========================================================= */
+
+.navo-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.navo-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+
+    width: min(500px, 100vw);
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #f5f5f2;
+    color: #111111;
+
+    box-shadow:
+        -20px 0 70px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.navo-drawer-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 32px 30px 25px;
+
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.navo-drawer-eyebrow {
+    margin: 0 0 8px;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+
+    color: rgba(17, 17, 17, 0.45);
+}
+
+.navo-drawer-header h2 {
+    margin: 0;
+
+    font-size: 38px;
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+}
+
+.navo-drawer-close {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(17, 17, 17, 0.12);
+
+    background: transparent;
+    color: #111111;
+
+    cursor: pointer;
+
+    transition:
+        background 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease;
+}
+
+.navo-drawer-close:hover {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.navo-drawer-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 30px;
+
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navo-drawer-meta span {
+    color: rgba(17, 17, 17, 0.45);
+}
+
+.navo-drawer-meta button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+
+    color: rgba(17, 17, 17, 0.45);
+
+    font-family: inherit;
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: color 180ms ease;
+}
+
+.navo-drawer-meta button:hover {
+    color: #111111;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.navo-drawer-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.navo-cart-list {
+    padding: 10px 30px 30px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.navo-drawer-empty {
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 35px;
+    text-align: center;
+}
+
+.navo-empty-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(17, 17, 17, 0.12);
+
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.navo-empty-label {
+    margin: 0 0 10px;
+
+    color: #657bd0;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.navo-drawer-empty h3 {
+    margin: 0;
+
+    font-size: 28px;
+    letter-spacing: -0.045em;
+}
+
+.navo-drawer-empty>p:not(.navo-empty-label) {
+    max-width: 280px;
+
+    margin: 14px 0 25px;
+
+    color: rgba(17, 17, 17, 0.48);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.navo-empty-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid #111111;
+    background: #111111;
+    color: #ffffff;
+
+    padding: 13px 17px;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 180ms ease,
+        transform 180ms ease;
+}
+
+.navo-empty-action:hover {
+    background: #647ee0;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CART ITEM
+========================================================= */
+
+.navo-cart-item {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 18px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+
+/* =========================================================
+   PRODUCT VISUAL
+========================================================= */
+
+.navo-cart-product-visual {
+    position: relative;
+
+    width: 112px;
+    height: 125px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 35%,
+            rgba(118, 144, 255, 0.4),
+            transparent 28%),
+        linear-gradient(145deg,
+            #202329,
+            #08090a);
+
+    border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.navo-cart-product-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 0 30px rgba(100, 130, 255, 0.15);
+}
+
+.navo-cart-product-visual span {
+    position: relative;
+    z-index: 2;
+
+    padding: 10px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   ITEM INFO
+========================================================= */
+
+.navo-cart-item-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navo-cart-item-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.navo-cart-item-type {
+    margin: 0 0 5px;
+
+    color: rgba(17, 17, 17, 0.4);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.navo-cart-item-top h3 {
+    margin: 0;
+
+    font-size: 18px;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+}
+
+.navo-cart-remove {
+    width: 30px;
+    height: 30px;
+
+    flex: 0 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    background: transparent;
+
+    color: rgba(17, 17, 17, 0.35);
+
+    cursor: pointer;
+
+    transition:
+        background 180ms ease,
+        color 180ms ease;
+}
+
+.navo-cart-remove:hover {
+    background: rgba(180, 50, 50, 0.08);
+    color: #a33b3b;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.navo-cart-item-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 18px;
+}
+
+.navo-quantity-control {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid rgba(17, 17, 17, 0.12);
+}
+
+.navo-quantity-control button {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    background: transparent;
+
+    color: #111111;
+
+    cursor: pointer;
+
+    transition: background 180ms ease;
+}
+
+.navo-quantity-control button:hover {
+    background: rgba(17, 17, 17, 0.08);
+}
+
+.navo-quantity-control span {
+    min-width: 30px;
+
+    text-align: center;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.navo-cart-item-bottom strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.navo-drawer-footer {
+    padding: 22px 30px 28px;
+
+    border-top: 1px solid rgba(17, 17, 17, 0.1);
+
+    background: #eeeeeb;
+}
+
+.navo-cart-subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navo-cart-subtotal span {
+    color: rgba(17, 17, 17, 0.45);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.navo-cart-subtotal strong {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.navo-cart-note {
+    margin: 9px 0 18px;
+
+    color: rgba(17, 17, 17, 0.38);
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.navo-cart-checkout {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: 1px solid #111111;
+    background: #111111;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 180ms ease,
+        transform 180ms ease;
+}
+
+.navo-cart-checkout:hover {
+    background: #647ee0;
+    border-color: #647ee0;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.navo-drawer-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.navo-drawer-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.navo-drawer-content::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, 0.16);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+    .navo-drawer {
+        width: 100vw;
+    }
+
+    .navo-drawer-header {
+        padding: 24px 20px 20px;
+    }
+
+    .navo-drawer-header h2 {
+        font-size: 32px;
+    }
+
+    .navo-drawer-meta {
+        padding: 13px 20px;
+    }
+
+    .navo-cart-list {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navo-cart-item {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .navo-cart-product-visual {
+        width: 90px;
+        height: 105px;
+    }
+
+    .navo-cart-product-visual::after {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navo-cart-item-top h3 {
+        font-size: 16px;
+    }
+
+    .navo-drawer-footer {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navo-drawer-close,
+    .navo-empty-action,
+    .navo-cart-remove,
+    .navo-quantity-control button,
+    .navo-cart-checkout {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   N∆VO — CART PRODUCT IMAGE
+   Uses the exact product image selected by the user.
+========================================================= */
+
+.navo-cart-product-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* =========================================================
+   N∆VO — CART PRODUCT IMAGE
+========================================================= */
+
+.navo-cart-product-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}

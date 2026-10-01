@@ -1,0 +1,620 @@
+/* =========================================================
+   N∆VO — LOGIN
+========================================================= */
+
+.navo-auth-page {
+    min-height: 100vh;
+    background: #050505;
+    color: #ffffff;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.navo-auth-shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+}
+
+
+/* =========================================================
+   VISUAL SIDE
+========================================================= */
+
+.navo-auth-visual {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 50% 42%,
+            rgba(73, 116, 255, 0.16),
+            transparent 28%),
+        radial-gradient(circle at 70% 75%,
+            rgba(126, 73, 255, 0.12),
+            transparent 30%),
+        #070707;
+}
+
+.navo-auth-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.25;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.055) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.055) 1px,
+            transparent 1px);
+    background-size: 70px 70px;
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+}
+
+.navo-auth-orb {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow:
+        0 0 100px rgba(56, 104, 255, 0.08),
+        inset 0 0 100px rgba(100, 70, 255, 0.06);
+}
+
+.navo-auth-orb::before,
+.navo-auth-orb::after {
+    content: "";
+    position: absolute;
+    inset: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.navo-auth-orb::after {
+    inset: 105px;
+    border-color: rgba(100, 150, 255, 0.12);
+}
+
+.navo-auth-orb span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #7ea2ff;
+    box-shadow: 0 0 18px rgba(126, 162, 255, 0.8);
+}
+
+.navo-auth-orb span:nth-child(1) {
+    top: 16%;
+    left: 50%;
+}
+
+.navo-auth-orb span:nth-child(2) {
+    top: 50%;
+    right: 10%;
+}
+
+.navo-auth-orb span:nth-child(3) {
+    bottom: 14%;
+    left: 35%;
+}
+
+
+.navo-auth-visual-top,
+.navo-auth-visual-bottom {
+    position: absolute;
+    left: 46px;
+    right: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.navo-auth-visual-top {
+    top: 38px;
+}
+
+.navo-auth-visual-bottom {
+    bottom: 34px;
+}
+
+
+.navo-auth-visual-content {
+    position: absolute;
+    left: 46px;
+    bottom: 100px;
+    max-width: 470px;
+    z-index: 2;
+}
+
+.navo-auth-eyebrow {
+    margin: 0 0 22px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    color: #7ea2ff;
+}
+
+.navo-auth-visual-content h1 {
+    margin: 0;
+    font-size: clamp(56px, 6vw, 94px);
+    line-height: 0.84;
+    letter-spacing: -0.065em;
+    font-weight: 600;
+}
+
+.navo-auth-visual-content>p:last-child {
+    max-width: 370px;
+    margin: 30px 0 0;
+    color: rgba(255, 255, 255, 0.52);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM PANEL
+========================================================= */
+
+.navo-auth-form-panel {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f2;
+    color: #111111;
+}
+
+.navo-auth-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 46px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navo-auth-logo {
+    color: #111111;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.navo-auth-index {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: rgba(17, 17, 17, 0.4);
+}
+
+
+.navo-auth-form-content {
+    width: min(100%, 500px);
+    margin: auto;
+    padding: 60px 46px;
+}
+
+.navo-auth-label {
+    margin: 0 0 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #6479bd;
+}
+
+.navo-auth-heading h2 {
+    margin: 0;
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+}
+
+.navo-auth-heading>p:last-child {
+    margin: 18px 0 0;
+    color: rgba(17, 17, 17, 0.52);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.navo-auth-form {
+    margin-top: 42px;
+}
+
+.navo-form-field {
+    margin-bottom: 26px;
+}
+
+.navo-form-field label,
+.navo-form-label-row label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.navo-form-field input {
+    width: 100%;
+    height: 54px;
+    box-sizing: border-box;
+    border: 1px solid rgba(17, 17, 17, 0.16);
+    border-radius: 0;
+    outline: none;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 0 16px;
+    color: #111111;
+    font-family: inherit;
+    font-size: 14px;
+    transition:
+        border-color 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.navo-form-field input::placeholder {
+    color: rgba(17, 17, 17, 0.32);
+}
+
+.navo-form-field input:focus {
+    border-color: #657dce;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(101, 125, 206, 0.09);
+}
+
+.navo-form-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navo-form-label-row label {
+    margin-bottom: 10px;
+}
+
+.navo-password-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: rgba(17, 17, 17, 0.48);
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.navo-password-toggle:hover {
+    color: #111111;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.navo-login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: -4px;
+    margin-bottom: 28px;
+}
+
+.navo-checkbox {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: rgba(17, 17, 17, 0.58);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.navo-checkbox input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navo-checkbox-box {
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(17, 17, 17, 0.25);
+    background: transparent;
+    transition:
+        background 180ms ease,
+        border-color 180ms ease;
+}
+
+.navo-checkbox input:checked+.navo-checkbox-box {
+    border-color: #111111;
+    background: #111111;
+    box-shadow: inset 0 0 0 3px #f5f5f2;
+}
+
+.navo-forgot-button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: rgba(17, 17, 17, 0.58);
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.navo-forgot-button:hover {
+    color: #111111;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.navo-auth-submit {
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 1px solid #111111;
+    background: #111111;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    transition:
+        background 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.navo-auth-submit:hover:not(:disabled) {
+    background: #647ee0;
+    border-color: #647ee0;
+    transform: translateY(-1px);
+}
+
+.navo-auth-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.navo-spinner {
+    animation: navo-spin 0.8s linear infinite;
+}
+
+@keyframes navo-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   DIVIDER / SWITCH
+========================================================= */
+
+.navo-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 32px 0 26px;
+}
+
+.navo-auth-divider span {
+    flex: 1;
+    height: 1px;
+    background: rgba(17, 17, 17, 0.1);
+}
+
+.navo-auth-divider small {
+    color: rgba(17, 17, 17, 0.3);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+}
+
+.navo-auth-switch {
+    margin: 0;
+    text-align: center;
+    color: rgba(17, 17, 17, 0.5);
+    font-size: 12px;
+}
+
+.navo-auth-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 5px;
+    color: #111111;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navo-auth-switch a:hover {
+    color: #647ee0;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.navo-auth-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 46px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+    color: rgba(17, 17, 17, 0.34);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .navo-auth-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .navo-auth-visual {
+        min-height: 430px;
+    }
+
+    .navo-auth-visual-content {
+        left: 32px;
+        bottom: 55px;
+    }
+
+    .navo-auth-visual-content h1 {
+        font-size: clamp(48px, 10vw, 76px);
+    }
+
+    .navo-auth-orb {
+        width: 340px;
+        height: 340px;
+        top: 43%;
+        left: 70%;
+    }
+
+    .navo-auth-form-panel {
+        min-height: auto;
+    }
+
+    .navo-auth-form-content {
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+    .navo-auth-visual {
+        min-height: 340px;
+    }
+
+    .navo-auth-visual-top,
+    .navo-auth-visual-bottom {
+        left: 20px;
+        right: 20px;
+    }
+
+    .navo-auth-visual-top {
+        top: 22px;
+    }
+
+    .navo-auth-visual-bottom {
+        bottom: 20px;
+    }
+
+    .navo-auth-visual-content {
+        left: 20px;
+        right: 20px;
+        bottom: 48px;
+    }
+
+    .navo-auth-eyebrow {
+        margin-bottom: 13px;
+    }
+
+    .navo-auth-visual-content h1 {
+        font-size: 48px;
+    }
+
+    .navo-auth-visual-content>p:last-child {
+        display: none;
+    }
+
+    .navo-auth-orb {
+        width: 260px;
+        height: 260px;
+        left: 75%;
+    }
+
+    .navo-auth-form-header {
+        padding: 22px 20px;
+    }
+
+    .navo-auth-form-content {
+        padding: 46px 20px 50px;
+    }
+
+    .navo-auth-heading h2 {
+        font-size: 40px;
+    }
+
+    .navo-auth-form {
+        margin-top: 34px;
+    }
+
+    .navo-login-options {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .navo-auth-footer {
+        padding: 20px;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .navo-auth-footer span:last-child {
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navo-auth-submit,
+    .navo-form-field input,
+    .navo-checkbox-box {
+        transition: none;
+    }
+
+    .navo-spinner {
+        animation: none;
+    }
+}

@@ -1,0 +1,1246 @@
+/* =========================================================
+   Nâˆ†VO â€” NAVBAR
+   Desktop / Tablet / Mobile
+========================================================= */
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navo-navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: var(--navo-navbar-height);
+
+    z-index: var(--navo-z-navbar);
+
+    background:
+        rgba(5,
+            6,
+            9,
+            0.72);
+
+    border-bottom:
+        1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+}
+
+
+/* =========================================================
+   NAVBAR INNER
+========================================================= */
+
+.navo-navbar-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding:
+        0 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* =========================================================
+   Nâˆ†VO LOGO
+========================================================= */
+
+.navo-logo {
+
+    flex: 0 0 auto;
+
+    width: max-content;
+
+    min-width: max-content;
+
+    max-width: none;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
+
+    white-space: nowrap;
+
+    overflow: visible;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing:
+        -0.08em;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   LOGO LETTERS
+========================================================= */
+
+.navo-logo-letter {
+
+    display: inline-block;
+
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOGO TRIANGLE
+========================================================= */
+
+.navo-logo-symbol {
+
+    display: inline-block;
+
+    flex: 0 0 auto;
+
+    margin:
+        0 1px;
+
+    font-size:
+        0.90em;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOGO HOVER
+========================================================= */
+
+.navo-logo:hover {
+
+    opacity: 0.72;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.navo-desktop-nav {
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap:
+        clamp(28px,
+            3.2vw,
+            54px);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION LINKS
+========================================================= */
+
+.navo-desktop-nav a {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.72);
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION UNDERLINE
+========================================================= */
+
+.navo-desktop-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #ffffff;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        center;
+
+    transition:
+        transform 0.30s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION HOVER
+========================================================= */
+
+.navo-desktop-nav a:hover {
+
+    color: #ffffff;
+}
+
+
+.navo-desktop-nav a:hover::after {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   NAVIGATION ACTIONS
+========================================================= */
+
+.navo-nav-actions {
+
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+}
+
+
+/* =========================================================
+   ICON BUTTON
+========================================================= */
+
+.navo-icon-button {
+
+    width: 40px;
+
+    height: 40px;
+
+    padding: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.78);
+
+    background: transparent;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    transition:
+        color 0.20s ease,
+        background 0.20s ease,
+        transform 0.20s ease;
+}
+
+
+/* =========================================================
+   ICON BUTTON HOVER
+========================================================= */
+
+.navo-icon-button:hover {
+
+    color: #ffffff;
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.07);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   Hidden on desktop.
+========================================================= */
+
+.navo-menu-button {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    color: #ffffff;
+
+    background: transparent;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.20s ease,
+        transform 0.20s ease;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON HOVER
+========================================================= */
+
+.navo-menu-button:hover {
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.08);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON ACTIVE
+========================================================= */
+
+.navo-menu-button:active {
+
+    transform:
+        scale(0.94);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.navo-mobile-menu {
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    overflow: hidden;
+
+    background:
+        rgba(5,
+            6,
+            9,
+            0.97);
+
+    border-bottom:
+        1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    box-shadow:
+        0 25px 60px rgba(0,
+            0,
+            0,
+            0.30);
+
+    backdrop-filter:
+        blur(25px);
+
+    -webkit-backdrop-filter:
+        blur(25px);
+}
+
+
+/* =========================================================
+   MOBILE MENU INNER
+========================================================= */
+
+.navo-mobile-menu-inner {
+
+    width: 100%;
+
+    padding:
+        18px 24px 28px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   MOBILE MENU LINKS
+========================================================= */
+
+.navo-mobile-menu-inner>a {
+
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border-bottom:
+        1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.86);
+
+    text-decoration: none;
+
+    transition:
+        color 0.20s ease,
+        padding-left 0.20s ease;
+}
+
+
+/* =========================================================
+   MOBILE MENU LINK HOVER
+========================================================= */
+
+.navo-mobile-menu-inner>a:hover {
+
+    color: #ffffff;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   MOBILE MENU NUMBER
+========================================================= */
+
+.navo-mobile-index {
+
+    width: 25px;
+
+    min-width: 25px;
+
+    font-family:
+        var(--navo-font-mono);
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        var(--navo-text-muted);
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   MOBILE MENU LABEL
+========================================================= */
+
+.navo-mobile-label {
+
+    display: inline-block;
+
+    flex: 1 1 auto;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOBILE DIVIDER
+========================================================= */
+
+.navo-mobile-divider {
+
+    width: 100%;
+
+    height: 16px;
+
+    flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   =========================================================
+   TABLET + MOBILE
+   =========================================================
+
+   IMPORTANT:
+
+   The desktop navigation is completely hidden here.
+
+   This means the following will NOT appear beside the
+   hamburger:
+
+       Timeline
+       Products
+       Wearables
+       Vault
+       Future
+
+   They exist only inside the hamburger menu.
+
+========================================================= */
+
+@media (max-width: 1024px) {
+
+
+    /* =====================================================
+       NAVBAR HEIGHT
+    ====================================================== */
+
+    .navo-navbar {
+
+        height:
+            var(--navo-navbar-height-mobile);
+    }
+
+
+    /* =====================================================
+       NAVBAR INNER
+    ====================================================== */
+
+    .navo-navbar-inner {
+
+        height: 100%;
+
+        padding:
+            0 22px;
+
+        gap: 0;
+
+        justify-content:
+            space-between;
+    }
+
+
+    /* =====================================================
+       IMPORTANT â€” HIDE DESKTOP NAVIGATION
+    ====================================================== */
+
+    .navo-desktop-nav {
+
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       HIDE DESKTOP ACTIONS
+    ====================================================== */
+
+    .navo-search-button {
+
+        display: none !important;
+    }
+
+
+    .navo-wishlist-button {
+
+        display: none !important;
+    }
+
+
+    .navo-cart-button {
+
+        display: none !important;
+    }
+
+
+    .navo-nav-actions .desktop-action {
+
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       NAV ACTIONS
+
+       Only the hamburger remains.
+    ====================================================== */
+
+    .navo-nav-actions {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-end;
+
+        margin-left: auto;
+
+        gap: 0;
+    }
+
+
+    /* =====================================================
+       SHOW HAMBURGER
+    ====================================================== */
+
+    .navo-menu-button {
+
+        display: inline-flex !important;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+
+    /* =====================================================
+       LOGO â€” NEVER WRAP
+
+       This specifically fixes:
+
+           Nâˆ†
+           VO
+
+       and keeps:
+
+           Nâˆ†VO
+    ====================================================== */
+
+    .navo-logo {
+
+        display: inline-flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        width: max-content;
+
+        min-width: max-content;
+
+        max-width: none;
+
+        white-space: nowrap;
+
+        overflow: visible;
+
+        font-size: 27px;
+
+        line-height: 1;
+
+        letter-spacing:
+            -0.08em;
+    }
+
+
+    .navo-logo-letter {
+
+        flex: 0 0 auto;
+
+        white-space: nowrap;
+    }
+
+
+    .navo-logo-symbol {
+
+        flex: 0 0 auto;
+
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+
+    /* =====================================================
+       NAVBAR
+    ====================================================== */
+
+    .navo-navbar {
+
+        height: 68px;
+    }
+
+
+    /* =====================================================
+       INNER
+    ====================================================== */
+
+    .navo-navbar-inner {
+
+        padding:
+            0 20px;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ====================================================== */
+
+    .navo-logo {
+
+        font-size: 25px;
+
+        width: max-content;
+
+        min-width: max-content;
+
+        max-width: none;
+
+        flex: 0 0 auto;
+
+        white-space: nowrap;
+
+        letter-spacing:
+            -0.08em;
+    }
+
+
+    /* =====================================================
+       MENU BUTTON
+    ====================================================== */
+
+    .navo-menu-button {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+    ====================================================== */
+
+    .navo-mobile-menu-inner {
+
+        padding:
+            18px 20px 28px;
+    }
+
+
+    /* =====================================================
+       MOBILE LINKS
+    ====================================================== */
+
+    .navo-mobile-menu-inner>a {
+
+        min-height: 52px;
+
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+
+    .navo-navbar-inner {
+
+        padding:
+            0 16px;
+    }
+
+
+    .navo-logo {
+
+        font-size: 24px;
+    }
+
+
+    .navo-menu-button {
+
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .navo-mobile-menu-inner {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY â€” REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navo-logo,
+    .navo-desktop-nav a,
+    .navo-icon-button,
+    .navo-menu-button,
+    .navo-mobile-menu-inner>a {
+
+        transition: none;
+    }
+
+
+    .navo-desktop-nav a::after {
+
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   STEP 15 â€” CART / WISHLIST COUNTS
+   Added without changing the existing navbar layout.
+========================================================= */
+
+.navo-icon-button {
+    position: relative;
+}
+
+.navo-nav-count {
+    position: absolute;
+
+    top: 3px;
+    right: 2px;
+
+    min-width: 15px;
+    height: 15px;
+
+    padding: 0 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #050609;
+
+    font-family: var(--navo-font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.navo-mobile-shop-action {
+    width: 100%;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    min-height: 54px;
+
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition:
+        color 0.20s ease,
+        padding-left 0.20s ease;
+}
+
+.navo-mobile-shop-action:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.navo-mobile-shop-action .navo-mobile-label {
+    flex: 1 1 auto;
+}
+
+.navo-mobile-count {
+    min-width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #050609;
+
+    font-family: var(--navo-font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media (max-width: 640px) {
+    .navo-mobile-shop-action {
+        min-height: 52px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navo-mobile-shop-action {
+        min-height: 50px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navo-mobile-shop-action {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   Nâˆ†VO â€” SEARCH OVERLAY
+========================================================= */
+
+.navo-search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 92px 24px 30px;
+}
+
+.navo-search-overlay-backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: pointer;
+}
+
+.navo-search-panel {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 100%);
+    overflow: hidden;
+    border: 1px solid rgba(150, 170, 255, 0.22);
+    background:
+        radial-gradient(circle at 78% 10%,
+            rgba(55, 78, 160, 0.16),
+            transparent 38%),
+        #090b12;
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.navo-search-panel-header {
+    min-height: 58px;
+    padding: 0 18px 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(180, 195, 235, 0.62);
+    font-family: var(--navo-font-mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+}
+
+.navo-search-close {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.72);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navo-search-close:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.navo-search-form {
+    margin: 22px;
+    min-height: 68px;
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px 0 18px;
+    border: 1px solid rgba(150, 170, 255, 0.25);
+    background: rgba(255, 255, 255, 0.025);
+    color: rgba(190, 205, 255, 0.8);
+}
+
+.navo-search-form input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.navo-search-form input::placeholder {
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.navo-search-form input::-webkit-search-cancel-button {
+    filter: invert(1);
+}
+
+.navo-search-form>button {
+    min-height: 48px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    background: #ffffff;
+    color: #111111;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navo-search-results {
+    padding: 0 22px 22px;
+}
+
+.navo-search-empty {
+    padding: 18px 4px 12px;
+    color: rgba(255, 255, 255, 0.32);
+}
+
+.navo-search-empty span {
+    font-family: var(--navo-font-mono);
+    font-size: 9px;
+    letter-spacing: 0.16em;
+}
+
+.navo-search-empty p {
+    margin: 9px 0 0;
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.navo-search-result {
+    width: 100%;
+    min-height: 66px;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 28px;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    background: transparent;
+    color: #ffffff;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.navo-search-result:hover {
+    padding-left: 14px;
+    background: rgba(120, 145, 255, 0.07);
+}
+
+.navo-search-result-index {
+    color: rgba(150, 170, 230, 0.45);
+    font-family: var(--navo-font-mono);
+    font-size: 9px;
+}
+
+.navo-search-result-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navo-search-result-info strong {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navo-search-result-info small {
+    color: rgba(255, 255, 255, 0.36);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.navo-search-result-arrow {
+    color: rgba(165, 185, 255, 0.75);
+    font-size: 18px;
+    text-align: right;
+}
+
+@media (max-width: 640px) {
+    .navo-search-overlay {
+        padding: 76px 14px 20px;
+    }
+
+    .navo-search-form {
+        margin: 14px;
+        min-height: 60px;
+        grid-template-columns: 24px minmax(0, 1fr);
+        padding: 0 14px;
+    }
+
+    .navo-search-form>button {
+        grid-column: 1 / -1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navo-search-form {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navo-search-results {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}

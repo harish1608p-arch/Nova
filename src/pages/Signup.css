@@ -1,0 +1,240 @@
+/* =========================================================
+   N∆VO — SIGN UP
+========================================================= */
+
+.navo-signup-page .navo-auth-form-panel {
+    background: #f1f2f0;
+}
+
+.navo-signup-visual {
+    background:
+        radial-gradient(circle at 35% 45%,
+            rgba(111, 91, 255, 0.17),
+            transparent 30%),
+        radial-gradient(circle at 75% 70%,
+            rgba(44, 179, 255, 0.1),
+            transparent 28%),
+        #060708;
+}
+
+
+/* =========================================================
+   SIGNUP ORBIT
+========================================================= */
+
+.navo-signup-orbit {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 52%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.navo-signup-orbit div {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.navo-signup-orbit div:nth-child(1) {
+    transform: rotateX(68deg) rotateZ(20deg);
+}
+
+.navo-signup-orbit div:nth-child(2) {
+    transform: rotateY(65deg) rotateZ(-15deg);
+}
+
+.navo-signup-orbit div:nth-child(3) {
+    inset: 90px;
+    border-color: rgba(113, 139, 255, 0.16);
+}
+
+.navo-signup-orbit::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 20%;
+    left: 20%;
+    border-radius: 50%;
+    background: #8ba7ff;
+    box-shadow:
+        0 0 15px #8ba7ff,
+        0 0 50px rgba(139, 167, 255, 0.7);
+}
+
+
+/* =========================================================
+   DECORATIVE LINES
+========================================================= */
+
+.navo-signup-lines {
+    position: absolute;
+    top: 38%;
+    right: 12%;
+    width: 150px;
+    z-index: 2;
+    opacity: 0.35;
+}
+
+.navo-signup-lines span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 14px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.55));
+}
+
+.navo-signup-lines span:nth-child(2) {
+    width: 72%;
+}
+
+.navo-signup-lines span:nth-child(3) {
+    width: 44%;
+}
+
+
+/* =========================================================
+   SIGNUP FORM
+========================================================= */
+
+.navo-signup-content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.navo-signup-content .navo-auth-form {
+    margin-top: 32px;
+}
+
+.navo-signup-content .navo-form-field {
+    margin-bottom: 19px;
+}
+
+.navo-password-hint {
+    margin-top: 7px;
+    color: rgba(17, 17, 17, 0.35);
+    font-size: 9px;
+    letter-spacing: 0.03em;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.navo-terms-checkbox {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 3px 0 25px;
+
+    color: rgba(17, 17, 17, 0.5);
+    font-size: 11px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.navo-terms-checkbox input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navo-terms-box {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(17, 17, 17, 0.24);
+
+    color: transparent;
+
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease;
+}
+
+.navo-terms-checkbox input:checked+.navo-terms-box {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+}
+
+.navo-terms-checkbox a {
+    color: #111111;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .navo-signup-orbit {
+        width: 370px;
+        height: 370px;
+        left: 70%;
+    }
+
+    .navo-signup-lines {
+        right: 6%;
+        top: 30%;
+    }
+
+    .navo-signup-content {
+        padding-top: 50px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+    .navo-signup-orbit {
+        width: 270px;
+        height: 270px;
+        left: 78%;
+        top: 42%;
+    }
+
+    .navo-signup-lines {
+        right: 4%;
+        top: 28%;
+        width: 90px;
+    }
+
+    .navo-signup-content {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .navo-signup-content .navo-auth-heading h2 {
+        font-size: 38px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .navo-terms-box {
+        transition: none;
+    }
+}

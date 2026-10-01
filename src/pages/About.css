@@ -1,0 +1,827 @@
+/* =========================================================
+   N∆VO — ABOUT
+   Brand / Philosophy / Evolution
+========================================================= */
+
+.navo-about {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 72% 8%, rgba(64, 74, 120, 0.18), transparent 30%),
+        radial-gradient(circle at 15% 55%, rgba(40, 48, 78, 0.12), transparent 30%),
+        #050609;
+    color: #f5f7fb;
+}
+
+.about-background {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.about-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+.about-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+}
+
+.about-orb-one {
+    width: 420px;
+    height: 420px;
+    top: 7%;
+    right: 4%;
+    background: rgba(79, 95, 180, 0.12);
+}
+
+.about-orb-two {
+    width: 340px;
+    height: 340px;
+    left: -140px;
+    top: 46%;
+    background: rgba(94, 61, 150, 0.1);
+}
+
+.about-container {
+    position: relative;
+    z-index: 2;
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    padding: 120px 58px 90px;
+}
+
+.about-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 82px;
+}
+
+.about-eyebrow,
+.about-status,
+.about-hero-copy span,
+.about-section-heading small,
+.about-manifesto-center span,
+.about-manifesto-meta,
+.about-future small,
+.about-bottom>span,
+.about-scroll {
+    font-family: Inter, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.about-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.about-eyebrow>span {
+    width: 32px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.about-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.about-status>span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #9eb0ff;
+    box-shadow: 0 0 12px rgba(158, 176, 255, 0.8);
+}
+
+.about-hero {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr) 250px;
+    align-items: end;
+    gap: 0;
+    margin-bottom: 100px;
+}
+
+.about-index {
+    padding-bottom: 12px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.about-heading {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(68px, 10.7vw, 164px);
+    font-weight: 300;
+    line-height: 0.78;
+    letter-spacing: -0.075em;
+    background: linear-gradient(135deg, #ffffff 8%, #b8c3ff 55%, #8e78ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-heading span:nth-child(2) {
+    margin-left: 0.18em;
+}
+
+.about-heading span:last-child {
+    margin-left: 0.5em;
+}
+
+.about-hero-copy {
+    padding-bottom: 10px;
+}
+
+.about-hero-copy p {
+    max-width: 235px;
+    margin: 0 0 25px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.about-hero-copy span {
+    display: block;
+    font-size: 8px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.about-statement {
+    display: grid;
+    grid-template-columns: 40px 1fr minmax(300px, 650px);
+    gap: 18px;
+    align-items: start;
+    margin-bottom: 105px;
+}
+
+.about-statement-number {
+    padding-top: 7px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.about-statement-line {
+    height: 1px;
+    margin-top: 12px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.about-statement-copy h2 {
+    margin: 0 0 22px;
+    font-size: clamp(34px, 4.2vw, 56px);
+    font-weight: 300;
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+}
+
+.about-statement-copy p {
+    max-width: 510px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.46);
+}
+
+.about-manifesto {
+    position: relative;
+    min-height: 420px;
+    margin-bottom: 115px;
+    padding: 34px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+        radial-gradient(circle at 50% 50%, rgba(95, 108, 190, 0.18), transparent 34%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+}
+
+.about-manifesto::before,
+.about-manifesto::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.about-manifesto::before {
+    inset: 0;
+    background:
+        linear-gradient(90deg, transparent 49.95%, rgba(255, 255, 255, 0.07) 50%, transparent 50.05%),
+        linear-gradient(0deg, transparent 49.95%, rgba(255, 255, 255, 0.045) 50%, transparent 50.05%);
+}
+
+.about-manifesto::after {
+    width: 520px;
+    height: 520px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(155, 171, 255, 0.14);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 55px rgba(155, 171, 255, 0.025),
+        0 0 0 110px rgba(155, 171, 255, 0.018);
+}
+
+.about-manifesto-mark {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.about-manifesto-center {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(80%, 600px);
+    text-align: center;
+}
+
+.about-manifesto-center span {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.about-manifesto-center strong {
+    display: block;
+    font-size: clamp(38px, 5vw, 70px);
+    font-weight: 300;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.about-manifesto-meta {
+    position: absolute;
+    z-index: 2;
+    right: 34px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.27);
+}
+
+.about-section-heading {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.about-section-heading>span {
+    padding-top: 4px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.about-section-heading small {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.about-section-heading h3 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.about-principles {
+    margin-bottom: 120px;
+}
+
+.about-principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.about-principle {
+    position: relative;
+    min-height: 270px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.022);
+    transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+}
+
+.about-principle:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.045);
+    border-color: rgba(165, 180, 255, 0.23);
+}
+
+.about-principle-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+
+.about-principle-top>span {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.27);
+}
+
+.about-principle-top svg {
+    color: #aebcff;
+}
+
+.about-principle h4 {
+    margin: 0 0 12px;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+}
+
+.about-principle p {
+    max-width: 300px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.about-evolution {
+    margin-bottom: 115px;
+}
+
+.about-evolution-layout {
+    display: grid;
+    grid-template-columns: minmax(200px, 0.75fr) 1.5fr;
+    gap: 70px;
+}
+
+.about-evolution-intro>span {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.about-evolution-intro p {
+    max-width: 260px;
+    margin: 28px 0 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.66);
+}
+
+.about-milestones {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-milestone {
+    display: grid;
+    grid-template-columns: 75px 30px 1fr;
+    min-height: 110px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-milestone-year {
+    padding-top: 25px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.about-milestone-marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.about-milestone-marker::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.about-milestone-marker span {
+    position: absolute;
+    top: 25px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(165, 180, 255, 0.8);
+    border-radius: 50%;
+    background: #080a10;
+    box-shadow: 0 0 14px rgba(145, 165, 255, 0.35);
+}
+
+.about-milestone-copy {
+    padding: 22px 0 22px 20px;
+}
+
+.about-milestone-copy h4 {
+    margin: 0 0 7px;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.about-milestone-copy p {
+    max-width: 480px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.about-future {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 80px;
+    padding: 48px;
+    border: 1px solid rgba(145, 164, 255, 0.18);
+    background:
+        radial-gradient(circle at 78% 50%, rgba(81, 91, 177, 0.16), transparent 34%),
+        rgba(255, 255, 255, 0.02);
+}
+
+.about-future-index {
+    align-self: start;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.about-future-copy small {
+    display: block;
+    margin-bottom: 17px;
+    font-size: 8px;
+    color: #9eafff;
+}
+
+.about-future-copy h3 {
+    margin: 0 0 18px;
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 300;
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+}
+
+.about-future-copy p {
+    max-width: 500px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.43);
+}
+
+.about-future>a,
+.about-bottom a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.about-future>a:hover,
+.about-bottom a:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    color: #101218;
+}
+
+.about-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-bottom>span {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.about-bottom p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.about-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 60px;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.24);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 100px 35px 75px;
+    }
+
+    .about-hero {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .about-hero-copy {
+        grid-column: 2;
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+        margin-top: 38px;
+    }
+
+    .about-hero-copy p {
+        margin: 0;
+    }
+
+    .about-statement {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .about-statement-copy {
+        grid-column: 2;
+    }
+
+    .about-evolution-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-evolution-intro p {
+        max-width: 500px;
+    }
+
+    .about-future {
+        padding: 38px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+    .about-container {
+        padding: 80px 20px 60px;
+    }
+
+    .about-top {
+        margin-bottom: 62px;
+    }
+
+    .about-status {
+        display: none;
+    }
+
+    .about-eyebrow {
+        font-size: 9px;
+    }
+
+    .about-hero {
+        display: block;
+        margin-bottom: 65px;
+    }
+
+    .about-index {
+        margin-bottom: 30px;
+    }
+
+    .about-heading {
+        font-size: clamp(52px, 17vw, 96px);
+        line-height: 0.8;
+    }
+
+    .about-heading span:nth-child(2) {
+        margin-left: 0.08em;
+    }
+
+    .about-heading span:last-child {
+        margin-left: 0.28em;
+    }
+
+    .about-hero-copy {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 38px;
+    }
+
+    .about-hero-copy p {
+        font-size: 13px;
+    }
+
+    .about-hero-copy span {
+        text-align: right;
+    }
+
+    .about-statement {
+        display: block;
+        margin-bottom: 75px;
+    }
+
+    .about-statement-number {
+        margin-bottom: 15px;
+    }
+
+    .about-statement-line {
+        margin: 0 0 28px;
+    }
+
+    .about-statement-copy h2 {
+        font-size: 34px;
+    }
+
+    .about-statement-copy p {
+        font-size: 12px;
+    }
+
+    .about-manifesto {
+        min-height: 360px;
+        margin-bottom: 80px;
+        padding: 20px;
+    }
+
+    .about-manifesto::after {
+        width: 330px;
+        height: 330px;
+    }
+
+    .about-manifesto-center {
+        width: 90%;
+    }
+
+    .about-manifesto-center strong {
+        font-size: 37px;
+    }
+
+    .about-manifesto-meta {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .about-section-heading {
+        grid-template-columns: 30px 1fr;
+        gap: 12px;
+    }
+
+    .about-section-heading h3 {
+        font-size: 31px;
+    }
+
+    .about-principles {
+        margin-bottom: 80px;
+    }
+
+    .about-principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-principle {
+        min-height: 220px;
+    }
+
+    .about-principle-top {
+        margin-bottom: 55px;
+    }
+
+    .about-evolution {
+        margin-bottom: 80px;
+    }
+
+    .about-milestone {
+        grid-template-columns: 60px 24px 1fr;
+        min-height: 105px;
+    }
+
+    .about-milestone-copy {
+        padding-left: 14px;
+    }
+
+    .about-milestone-copy p {
+        font-size: 10px;
+    }
+
+    .about-future {
+        display: block;
+        padding: 30px 24px;
+        margin-bottom: 55px;
+    }
+
+    .about-future-index {
+        margin-bottom: 25px;
+    }
+
+    .about-future-copy h3 {
+        font-size: 35px;
+    }
+
+    .about-future>a {
+        margin-top: 28px;
+    }
+
+    .about-bottom {
+        display: block;
+    }
+
+    .about-bottom p {
+        margin-top: 20px;
+        font-size: 17px;
+    }
+
+    .about-bottom a {
+        margin-top: 25px;
+    }
+
+    .about-scroll {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 420px) {
+    .about-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .about-heading {
+        font-size: 15.8vw;
+    }
+
+    .about-manifesto {
+        min-height: 330px;
+    }
+
+    .about-manifesto::after {
+        width: 285px;
+        height: 285px;
+    }
+
+    .about-manifesto-center strong {
+        font-size: 32px;
+    }
+
+    .about-hero-copy {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero-copy span {
+        text-align: left;
+    }
+
+    .about-milestone {
+        grid-template-columns: 52px 20px 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-principle,
+    .about-future>a,
+    .about-bottom a {
+        transition: none;
+    }
+}

@@ -1,0 +1,773 @@
+/* =========================================================
+   N∆VO — CHECKOUT
+   Premium frontend checkout experience
+========================================================= */
+
+.navo-checkout {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #050608;
+    color: #f4f4f2;
+}
+
+.navo-checkout-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    background:
+        radial-gradient(circle at 12% 20%,
+            rgba(80, 105, 255, 0.10),
+            transparent 30%),
+        radial-gradient(circle at 82% 72%,
+            rgba(0, 229, 255, 0.06),
+            transparent 28%),
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px);
+    background-size:
+        auto,
+        auto,
+        72px 72px,
+        72px 72px;
+}
+
+.navo-checkout-container {
+    position: relative;
+    z-index: 1;
+    width: min(1240px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 118px 0 80px;
+}
+
+.navo-checkout-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    color: rgba(255, 255, 255, 0.48);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.navo-checkout-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.68);
+    font: inherit;
+    letter-spacing: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navo-checkout-back:hover {
+    color: #fff;
+}
+
+.navo-checkout-eyebrow {
+    display: inline-flex;
+    color: rgba(255, 255, 255, 0.46);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.navo-checkout-access {
+    min-height: 100vh;
+}
+
+.navo-checkout-access-content {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.navo-checkout-access-content h1 {
+    margin: 22px 0 22px;
+    font-size: clamp(52px, 7vw, 96px);
+    line-height: 0.94;
+    font-weight: 500;
+    letter-spacing: -0.055em;
+}
+
+.navo-checkout-intro {
+    max-width: 520px;
+    margin: 0 auto 56px;
+    color: rgba(255, 255, 255, 0.52);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.navo-checkout-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    text-align: left;
+}
+
+.navo-checkout-choice {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 18px;
+    min-height: 190px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background: rgba(255, 255, 255, 0.025);
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        border-color 220ms ease,
+        background 220ms ease;
+}
+
+.navo-checkout-choice:hover {
+    border-color: rgba(255, 255, 255, 0.32);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navo-checkout-choice-primary {
+    background: #f4f4f2;
+    color: #050608;
+}
+
+.navo-checkout-choice-primary:hover {
+    background: #fff;
+}
+
+.navo-choice-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+}
+
+.navo-choice-content {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.navo-choice-content small {
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    opacity: 0.55;
+}
+
+.navo-choice-content strong {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navo-choice-content>span {
+    max-width: 270px;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.navo-checkout-choice-primary .navo-choice-content>span {
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.navo-checkout-secure-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.36);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 9px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.navo-checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 72px;
+    padding-top: 64px;
+}
+
+.navo-checkout-heading h1 {
+    margin: 18px 0 10px;
+    font-size: clamp(54px, 7vw, 92px);
+    line-height: 0.92;
+    font-weight: 500;
+    letter-spacing: -0.055em;
+}
+
+.navo-checkout-heading p {
+    margin: 0;
+    max-width: 520px;
+    color: rgba(255, 255, 255, 0.48);
+    line-height: 1.7;
+}
+
+.navo-checkout-progress {
+    display: flex;
+    align-items: center;
+    width: min(520px, 100%);
+    margin: 48px 0 54px;
+    color: rgba(255, 255, 255, 0.32);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.navo-checkout-progress div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
+}
+
+.navo-checkout-progress div span {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.navo-checkout-progress div.active {
+    color: #fff;
+}
+
+.navo-checkout-progress div.active span {
+    border-color: #fff;
+}
+
+.navo-progress-line {
+    flex: 1;
+    height: 1px;
+    margin: 0 15px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.navo-checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.navo-form-section {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.navo-form-section-heading {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.navo-form-section-heading>span {
+    color: rgba(255, 255, 255, 0.30);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 10px;
+}
+
+.navo-form-section-heading h2 {
+    margin: 0 0 7px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.navo-form-section-heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.40);
+    font-size: 12px;
+}
+
+.navo-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 16px;
+}
+
+.navo-form-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.navo-form-grid label.full {
+    grid-column: 1 / -1;
+}
+
+.navo-form-grid label>span,
+.navo-demo-payment label {
+    color: rgba(255, 255, 255, 0.50);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.navo-form-grid input,
+.navo-form-grid textarea,
+.navo-demo-payment input {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    outline: 0;
+    padding: 14px 15px;
+    background: rgba(255, 255, 255, 0.035);
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+    resize: vertical;
+    transition: border-color 180ms ease;
+}
+
+.navo-form-grid input:focus,
+.navo-form-grid textarea:focus,
+.navo-demo-payment input:focus {
+    border-color: rgba(255, 255, 255, 0.50);
+}
+
+.navo-form-grid input::placeholder,
+.navo-form-grid textarea::placeholder,
+.navo-demo-payment input::placeholder {
+    color: rgba(255, 255, 255, 0.24);
+}
+
+.navo-form-grid label small {
+    color: #ff8b8b;
+    font-size: 11px;
+}
+
+.navo-checkout-primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 54px;
+    border: 0;
+    padding: 0 24px;
+    background: #f4f4f2;
+    color: #050608;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 180ms ease,
+        background 180ms ease;
+}
+
+.navo-checkout-primary-button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.navo-checkout-form>.navo-checkout-primary-button {
+    align-self: flex-start;
+}
+
+.navo-checkout-summary {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.navo-summary-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.navo-summary-heading span,
+.navo-summary-heading strong {
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 9px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.navo-summary-heading span {
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.navo-summary-heading strong {
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 500;
+}
+
+.navo-summary-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.navo-summary-item {
+    display: grid;
+    grid-template-columns: 68px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.navo-summary-image {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+    background: #101217;
+}
+
+.navo-summary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navo-summary-image span {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.navo-summary-item>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.navo-summary-item>div:nth-child(2) span,
+.navo-summary-item>div:nth-child(2) small {
+    color: rgba(255, 255, 255, 0.36);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navo-summary-item>div:nth-child(2) strong {
+    overflow: hidden;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navo-summary-item>strong {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.navo-summary-totals {
+    padding: 22px 20px;
+}
+
+.navo-summary-totals>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+}
+
+.navo-summary-totals strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.navo-summary-totals .total {
+    margin-top: 12px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    color: #fff;
+    font-size: 13px;
+}
+
+.navo-summary-totals .total strong {
+    font-size: 20px;
+}
+
+.navo-payment-options {
+    display: grid;
+    gap: 10px;
+}
+
+.navo-payment-options button {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 17px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.025);
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+}
+
+.navo-payment-options button.active {
+    border-color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.navo-payment-options button span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.navo-payment-options strong {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.navo-payment-options small {
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 11px;
+}
+
+.navo-demo-payment {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.navo-demo-payment>div:first-child label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.navo-demo-payment label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.navo-payment-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+}
+
+.navo-checkout-success-page {
+    min-height: calc(100vh - 100px);
+    display: grid;
+    place-items: center;
+}
+
+.navo-checkout-success {
+    width: min(620px, 100%);
+    padding: 70px 0;
+    text-align: center;
+}
+
+.navo-success-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 28px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 50%;
+}
+
+.navo-checkout-success h1 {
+    margin: 22px 0;
+    font-size: clamp(54px, 8vw, 94px);
+    line-height: 0.92;
+    font-weight: 500;
+    letter-spacing: -0.055em;
+}
+
+.navo-checkout-success h1 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.navo-checkout-success>p {
+    max-width: 420px;
+    margin: 0 auto 34px;
+    color: rgba(255, 255, 255, 0.48);
+    line-height: 1.7;
+}
+
+.navo-order-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 34px;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.navo-order-number span {
+    color: rgba(255, 255, 255, 0.35);
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+}
+
+.navo-order-number strong {
+    font-family: var(--navo-font-mono, monospace);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   EMPTY CART
+========================================================= */
+
+.navo-checkout-access-content::after {
+    content: "";
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .navo-checkout-container {
+        width: min(100% - 48px, 900px);
+    }
+
+    .navo-checkout-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .navo-checkout-summary {
+        position: static;
+        order: -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .navo-checkout-container {
+        width: min(100% - 36px, 620px);
+        padding-top: 96px;
+    }
+
+    .navo-checkout-choice-grid,
+    .navo-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navo-form-grid label.full {
+        grid-column: auto;
+    }
+
+    .navo-checkout-access-content {
+        padding: 70px 0;
+    }
+
+    .navo-checkout-access-content h1 {
+        font-size: clamp(46px, 14vw, 72px);
+    }
+
+    .navo-checkout-choice {
+        min-height: 155px;
+        padding: 20px;
+    }
+
+    .navo-checkout-layout {
+        padding-top: 44px;
+    }
+
+    .navo-checkout-heading h1 {
+        font-size: clamp(48px, 14vw, 72px);
+    }
+
+    .navo-checkout-progress {
+        margin: 38px 0 42px;
+    }
+
+    .navo-summary-item {
+        grid-template-columns: 58px 1fr auto;
+        padding: 14px;
+    }
+
+    .navo-summary-image {
+        width: 58px;
+        height: 58px;
+    }
+
+    .navo-checkout-primary-button {
+        width: 100%;
+    }
+
+    .navo-checkout-form>.navo-checkout-primary-button {
+        align-self: stretch;
+    }
+}
+
+@media (max-width: 460px) {
+    .navo-checkout-container {
+        width: min(100% - 28px, 420px);
+    }
+
+    .navo-checkout-topbar {
+        font-size: 8px;
+    }
+
+    .navo-checkout-choice {
+        grid-template-columns: auto 1fr auto;
+        gap: 12px;
+    }
+
+    .navo-choice-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navo-choice-content strong {
+        font-size: 16px;
+    }
+
+    .navo-choice-content>span {
+        font-size: 11px;
+    }
+
+    .navo-form-section-heading {
+        grid-template-columns: 28px 1fr;
+    }
+
+    .navo-summary-item>strong {
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navo-checkout-choice,
+    .navo-checkout-primary-button {
+        transition: none;
+    }
+}

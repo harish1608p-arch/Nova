@@ -1,0 +1,1005 @@
+/* =========================================================
+   N∆VO — TECHNOLOGY TIMELINE
+   2026 → 1997
+========================================================= */
+
+.navo-timeline {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(180deg,
+            #111217 0%,
+            #181a1f 22%,
+            #303238 48%,
+            #c9c9c7 76%,
+            #f5f5f2 100%);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   CONTAINER
+--------------------------------------------------------- */
+
+.timeline-container {
+    width: min(1280px, calc(100% - 80px));
+    margin: 0 auto;
+    padding: 150px 0 120px;
+}
+
+/* ---------------------------------------------------------
+   HEADING
+--------------------------------------------------------- */
+
+.timeline-heading {
+    width: 100%;
+}
+
+.timeline-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 55px;
+
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.timeline-eyebrow span {
+    display: block;
+
+    width: 34px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.timeline-heading-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: end;
+    gap: 60px;
+}
+
+.timeline-heading h2 {
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+    font-size: clamp(64px, 8vw, 118px);
+    font-weight: 300;
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+}
+
+.timeline-heading h2 em {
+    font-style: normal;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.timeline-heading-row p {
+    margin: 0 0 8px;
+
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* ---------------------------------------------------------
+   INTRO
+--------------------------------------------------------- */
+
+.timeline-intro {
+    display: grid;
+    grid-template-columns: 70px minmax(80px, 1fr) auto 40px;
+    align-items: center;
+    gap: 24px;
+
+    margin-top: 130px;
+    margin-bottom: 90px;
+}
+
+.timeline-intro-number {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.timeline-intro-line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.timeline-intro-copy {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.timeline-intro-copy>span {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    white-space: nowrap;
+}
+
+.timeline-intro-copy p {
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+.timeline-intro-arrow {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------------------------------------------------
+   TIMELINE TRACK
+--------------------------------------------------------- */
+
+.timeline-track {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 82px;
+
+    width: 1px;
+
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ---------------------------------------------------------
+   ERA
+--------------------------------------------------------- */
+
+.timeline-era {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 165px minmax(0, 1fr);
+    gap: 80px;
+
+    min-height: 430px;
+
+    padding-bottom: 110px;
+}
+
+.timeline-era:last-child {
+    padding-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   YEAR
+--------------------------------------------------------- */
+
+.timeline-year-column {
+    position: relative;
+}
+
+.timeline-year {
+    display: block;
+
+    font-family: Inter, sans-serif;
+    font-size: 54px;
+    font-weight: 300;
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+}
+
+.timeline-year-dot {
+    position: absolute;
+
+    top: 8px;
+    left: 77px;
+
+    width: 11px;
+    height: 11px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    background: #17181c;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.025);
+}
+
+/* ---------------------------------------------------------
+   ERA CONTENT
+--------------------------------------------------------- */
+
+.timeline-era-content {
+    padding-top: 2px;
+}
+
+.timeline-era-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.timeline-era-header>div {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.timeline-era-index {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.timeline-era-header h3 {
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+}
+
+.timeline-era-arrow {
+    color: rgba(255, 255, 255, 0.45);
+
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.timeline-era:hover .timeline-era-arrow {
+    transform: translate(4px, -4px);
+    color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
+
+.timeline-era-description {
+    max-width: 530px;
+
+    margin: 28px 0 38px;
+
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+
+    color: rgba(255, 255, 255, 0.52);
+}
+
+/* ---------------------------------------------------------
+   PRODUCTS
+--------------------------------------------------------- */
+
+.timeline-products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.timeline-product {
+    min-height: 105px;
+
+    padding: 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.timeline-product:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255, 255, 255, 0.065);
+
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.timeline-product-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.timeline-product span {
+    display: block;
+
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* ---------------------------------------------------------
+   1997 — LIGHTER END
+--------------------------------------------------------- */
+
+.timeline-era-5 {
+    color: #17181b;
+}
+
+.timeline-era-5 .timeline-year-dot {
+    background: #f1f1ee;
+    border-color: rgba(20, 20, 20, 0.55);
+    box-shadow: 0 0 0 6px rgba(20, 20, 20, 0.04);
+}
+
+.timeline-era-5 .timeline-era-header {
+    border-color: rgba(20, 20, 20, 0.15);
+}
+
+.timeline-era-5 .timeline-era-index,
+.timeline-era-5 .timeline-era-description,
+.timeline-era-5 .timeline-product span {
+    color: rgba(20, 20, 20, 0.55);
+}
+
+.timeline-era-5 .timeline-era-arrow {
+    color: rgba(20, 20, 20, 0.45);
+}
+
+.timeline-era-5 .timeline-product {
+    border-color: rgba(20, 20, 20, 0.14);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.timeline-era-5 .timeline-product:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(20, 20, 20, 0.28);
+}
+
+.timeline-era-5 .timeline-product-icon {
+    border-color: rgba(20, 20, 20, 0.14);
+    color: rgba(20, 20, 20, 0.65);
+}
+
+/* ---------------------------------------------------------
+   BOTTOM
+--------------------------------------------------------- */
+
+.timeline-bottom {
+    margin-top: 110px;
+}
+
+.timeline-bottom-line {
+    width: 100%;
+    height: 1px;
+
+    background: rgba(20, 20, 20, 0.14);
+}
+
+.timeline-bottom-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: start;
+    gap: 50px;
+
+    padding-top: 30px;
+
+    color: #17181b;
+}
+
+.timeline-bottom-content>span {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+}
+
+.timeline-bottom-content p {
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: rgba(20, 20, 20, 0.55);
+}
+
+.timeline-bottom-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid rgba(20, 20, 20, 0.35);
+
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+
+    color: #17181b;
+
+    transition:
+        gap 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.timeline-bottom-content a:hover {
+    gap: 13px;
+    border-color: #17181b;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+    .timeline-container {
+        width: min(900px, calc(100% - 50px));
+        padding: 120px 0 100px;
+    }
+
+    .timeline-heading-row {
+        grid-template-columns: minmax(0, 1fr) 250px;
+        gap: 40px;
+    }
+
+    .timeline-heading h2 {
+        font-size: clamp(58px, 9vw, 90px);
+    }
+
+    .timeline-intro {
+        grid-template-columns: 50px minmax(50px, 1fr) auto 30px;
+        gap: 16px;
+        margin-top: 100px;
+    }
+
+    .timeline-intro-copy {
+        gap: 25px;
+    }
+
+    .timeline-era {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 50px;
+    }
+
+    .timeline-line {
+        left: 60px;
+    }
+
+    .timeline-year {
+        font-size: 44px;
+    }
+
+    .timeline-year-dot {
+        left: 55px;
+    }
+
+    .timeline-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+    .navo-timeline {
+        background: linear-gradient(180deg,
+                #111217 0%,
+                #202126 30%,
+                #66676a 62%,
+                #e9e9e6 100%);
+    }
+
+    .timeline-container {
+        width: calc(100% - 36px);
+        padding: 90px 0 80px;
+    }
+
+    /* HEADING */
+
+    .timeline-eyebrow {
+        margin-bottom: 35px;
+
+        font-size: 9px;
+        letter-spacing: 0.14em;
+    }
+
+    .timeline-eyebrow span {
+        width: 24px;
+    }
+
+    .timeline-heading-row {
+        display: block;
+    }
+
+    .timeline-heading h2 {
+        font-size: clamp(55px, 16vw, 78px);
+        line-height: 0.9;
+    }
+
+    .timeline-heading-row p {
+        margin-top: 35px;
+
+        font-size: 12px;
+    }
+
+    /* INTRO */
+
+    .timeline-intro {
+        display: grid;
+        grid-template-columns: 35px 1fr 25px;
+        gap: 12px;
+
+        margin-top: 75px;
+        margin-bottom: 65px;
+    }
+
+    .timeline-intro-line {
+        grid-column: 2;
+    }
+
+    .timeline-intro-copy {
+        grid-column: 2 / 4;
+
+        display: block;
+    }
+
+    .timeline-intro-copy>span {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .timeline-intro-copy p {
+        font-size: 11px;
+    }
+
+    .timeline-intro-arrow {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    /* TRACK */
+
+    .timeline-line {
+        left: 9px;
+    }
+
+    .timeline-era {
+        display: block;
+
+        min-height: auto;
+
+        padding-left: 35px;
+        padding-bottom: 80px;
+    }
+
+    .timeline-year-column {
+        min-height: 35px;
+    }
+
+    .timeline-year {
+        font-size: 38px;
+        line-height: 1;
+    }
+
+    .timeline-year-dot {
+        top: 6px;
+        left: 4px;
+
+        width: 11px;
+        height: 11px;
+    }
+
+    .timeline-era-content {
+        margin-top: 35px;
+    }
+
+    /* ERA HEADER */
+
+    .timeline-era-header {
+        padding-bottom: 18px;
+    }
+
+    .timeline-era-header>div {
+        display: block;
+    }
+
+    .timeline-era-index {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .timeline-era-header h3 {
+        font-size: 25px;
+        line-height: 1.15;
+    }
+
+    .timeline-era-arrow {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* DESCRIPTION */
+
+    .timeline-era-description {
+        margin: 22px 0 28px;
+
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    /* PRODUCTS */
+
+    .timeline-products {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .timeline-product {
+        min-height: 95px;
+        padding: 13px;
+    }
+
+    .timeline-product-icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 17px;
+    }
+
+    .timeline-product span {
+        font-size: 10px;
+    }
+
+    /* BOTTOM */
+
+    .timeline-bottom {
+        margin-top: 40px;
+    }
+
+    .timeline-bottom-content {
+        display: block;
+    }
+
+    .timeline-bottom-content>span {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .timeline-bottom-content p {
+        margin-bottom: 30px;
+        font-size: 12px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+    .timeline-container {
+        width: calc(100% - 28px);
+    }
+
+    .timeline-heading h2 {
+        font-size: 53px;
+    }
+
+    .timeline-products {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-product {
+        min-height: 78px;
+
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .timeline-product-icon {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   STEP 9 — INTERACTIVE TIMELINE LAYER
+   Built on the original 2026 → 1997 design.
+========================================================= */
+
+.navo-timeline {
+    --timeline-progress: 0%;
+}
+
+.timeline-track {
+    isolation: isolate;
+}
+
+.timeline-line {
+    overflow: hidden;
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(180deg,
+            #00e5ff 0%,
+            rgba(0, 229, 255, 0.65) 35%,
+            rgba(255, 255, 255, 0.42) 72%,
+            rgba(20, 20, 20, 0.5) 100%);
+    transform-origin: top;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.28);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.timeline-era {
+    cursor: pointer;
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.timeline-era:not(.is-active) {
+    opacity: 0.72;
+}
+
+.timeline-era.is-active {
+    opacity: 1;
+}
+
+.timeline-era.is-active .timeline-year {
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.1);
+}
+
+.timeline-era.is-active .timeline-year-dot {
+    transform: scale(1.18);
+    border-color: #00e5ff;
+    box-shadow:
+        0 0 0 6px rgba(0, 229, 255, 0.08),
+        0 0 18px rgba(0, 229, 255, 0.3);
+}
+
+.timeline-year-dot {
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.timeline-era-content {
+    position: relative;
+}
+
+.timeline-era-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -24px;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 229, 255, 0.55),
+            transparent);
+    transition: height 0.45s ease;
+}
+
+.timeline-era.is-active .timeline-era-content::before {
+    height: 74px;
+}
+
+.timeline-era-header h3 {
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.timeline-era.is-active .timeline-era-header h3 {
+    transform: translateX(4px);
+}
+
+.timeline-era-index {
+    transition: color 0.3s ease;
+}
+
+.timeline-era.is-active .timeline-era-index {
+    color: rgba(0, 229, 255, 0.75);
+}
+
+.timeline-product {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-product::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.055) 50%,
+            transparent 80%);
+    transform: translateX(-120%);
+    transition: transform 0.65s ease;
+    pointer-events: none;
+}
+
+.timeline-product:hover::after {
+    transform: translateX(120%);
+}
+
+.timeline-product-icon {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.timeline-product:hover .timeline-product-icon {
+    transform: translateY(-2px);
+    border-color: rgba(0, 229, 255, 0.28);
+    color: #00e5ff;
+}
+
+.timeline-era-5.is-active .timeline-year-dot {
+    border-color: rgba(20, 20, 20, 0.7);
+    box-shadow:
+        0 0 0 6px rgba(20, 20, 20, 0.05),
+        0 0 16px rgba(20, 20, 20, 0.08);
+}
+
+.timeline-era-5.is-active .timeline-era-index {
+    color: rgba(20, 20, 20, 0.78);
+}
+
+/* Era-specific atmosphere */
+
+.timeline-era-1 .timeline-era-content {
+    background:
+        radial-gradient(circle at 80% 20%,
+            rgba(0, 229, 255, 0.035),
+            transparent 30%);
+}
+
+.timeline-era-2 .timeline-era-content {
+    background:
+        radial-gradient(circle at 80% 20%,
+            rgba(124, 92, 255, 0.025),
+            transparent 30%);
+}
+
+.timeline-era-3 .timeline-era-content {
+    background:
+        radial-gradient(circle at 80% 20%,
+            rgba(255, 255, 255, 0.018),
+            transparent 30%);
+}
+
+/* Timeline accessibility */
+
+.timeline-era:focus-within {
+    outline: 1px solid rgba(0, 229, 255, 0.28);
+    outline-offset: 10px;
+}
+
+.timeline-year-dot:focus-visible,
+.timeline-bottom-content a:focus-visible {
+    outline: 1px solid #00e5ff;
+    outline-offset: 5px;
+}
+
+/* =========================================================
+   STEP 9 — TABLET INTERACTION
+========================================================= */
+
+@media (max-width: 1024px) {
+    .timeline-era-content::before {
+        left: -18px;
+    }
+
+    .timeline-product:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* =========================================================
+   STEP 9 — MOBILE TIMELINE
+========================================================= */
+
+@media (max-width: 700px) {
+    .timeline-progress {
+        width: 1px;
+    }
+
+    .timeline-era {
+        opacity: 1;
+    }
+
+    .timeline-era:not(.is-active) {
+        opacity: 0.8;
+    }
+
+    .timeline-era-content::before {
+        left: -17px;
+    }
+
+    .timeline-era.is-active .timeline-era-content::before {
+        height: 52px;
+    }
+
+    .timeline-year-dot {
+        z-index: 5;
+    }
+
+    .timeline-product::after {
+        display: none;
+    }
+
+    .timeline-era:focus-within {
+        outline-offset: 5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .timeline-era,
+    .timeline-year-dot,
+    .timeline-era-header h3,
+    .timeline-era-index,
+    .timeline-product-icon,
+    .timeline-product::after {
+        transition: none;
+    }
+
+    .timeline-era.is-active .timeline-era-header h3 {
+        transform: none;
+    }
+}

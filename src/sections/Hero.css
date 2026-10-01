@@ -1,0 +1,2045 @@
+/* =========================================================
+   N∆VO — HOMEPAGE HERO
+   STEP 4
+   FUTURE CONCEPT / NEUROSPHERE
+
+   Responsive:
+   Desktop
+   Tablet
+   Mobile
+
+   Video intentionally NOT used in this step.
+   Cinematic video layer will be added later.
+========================================================= */
+
+
+/* =========================================================
+   HERO ROOT
+========================================================= */
+
+.navo-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height:
+        100svh;
+
+    height:
+        max(760px,
+            100svh);
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 73% 38%,
+            rgba(54,
+                70,
+                125,
+                0.24),
+            transparent 30%),
+
+        radial-gradient(circle at 82% 72%,
+            rgba(111,
+                53,
+                178,
+                0.16),
+            transparent 28%),
+
+        radial-gradient(circle at 42% 45%,
+            rgba(20,
+                82,
+                112,
+                0.12),
+            transparent 32%),
+
+        #050609;
+}
+
+
+/* =========================================================
+   ATMOSPHERE
+========================================================= */
+
+.navo-hero-atmosphere {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO GLOWS
+========================================================= */
+
+.navo-hero-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter:
+        blur(90px);
+}
+
+
+/* ---------------------------------------------------------
+   GLOW ONE
+--------------------------------------------------------- */
+
+.navo-hero-glow-one {
+
+    width: 620px;
+
+    height: 620px;
+
+    top: 5%;
+
+    left: 60%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(31,
+            82,
+            145,
+            0.17);
+}
+
+
+/* ---------------------------------------------------------
+   GLOW TWO
+--------------------------------------------------------- */
+
+.navo-hero-glow-two {
+
+    width: 480px;
+
+    height: 480px;
+
+    right: -160px;
+
+    bottom: 2%;
+
+    background:
+        rgba(112,
+            56,
+            190,
+            0.13);
+}
+
+
+/* ---------------------------------------------------------
+   GLOW THREE
+--------------------------------------------------------- */
+
+.navo-hero-glow-three {
+
+    width: 320px;
+
+    height: 320px;
+
+    left: 32%;
+
+    top: 45%;
+
+    background:
+        rgba(0,
+            207,
+            255,
+            0.07);
+}
+
+
+/* =========================================================
+   TECH GRID
+========================================================= */
+
+.navo-hero-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: 0.20;
+
+    background-image:
+
+        linear-gradient(rgba(255,
+                255,
+                255,
+                0.035) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255,
+                255,
+                255,
+                0.035) 1px,
+            transparent 1px);
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.75) 55%,
+            transparent 100%);
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.75) 55%,
+            transparent 100%);
+}
+
+
+/* =========================================================
+   HORIZON
+========================================================= */
+
+.navo-hero-horizon {
+
+    position: absolute;
+
+    z-index: 2;
+
+    right: -8%;
+
+    bottom: 20%;
+
+    width: 75%;
+
+    height: 34%;
+
+    border-radius:
+        50% 50% 0 0;
+
+    transform:
+        rotate(-7deg);
+
+    background:
+        linear-gradient(to bottom,
+            rgba(91,
+                110,
+                150,
+                0.09),
+            rgba(6,
+                8,
+                12,
+                0.94) 62%);
+
+    border-top:
+        1px solid rgba(173,
+            211,
+            255,
+            0.13);
+
+    filter:
+        blur(0.2px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HORIZON LIGHT
+========================================================= */
+
+.navo-hero-horizon-glow {
+
+    position: absolute;
+
+    left: 10%;
+
+    top: -4px;
+
+    width: 65%;
+
+    height: 3px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(119,
+            213,
+            255,
+            0.45);
+
+    box-shadow:
+        0 0 25px rgba(73,
+            199,
+            255,
+            0.35),
+
+        0 0 80px rgba(73,
+            199,
+            255,
+            0.20);
+
+    filter:
+        blur(1px);
+}
+
+
+/* =========================================================
+   ORBIT SYSTEM
+========================================================= */
+
+.navo-hero-orbits {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 11%;
+
+    right: -3%;
+
+    width: 65%;
+
+    height: 75%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ORBIT
+========================================================= */
+
+.navo-hero-orbit {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    border:
+        1px solid rgba(154,
+            182,
+            255,
+            0.12);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%,
+            -50%);
+}
+
+
+/* ---------------------------------------------------------
+   ORBIT ONE
+--------------------------------------------------------- */
+
+.navo-hero-orbit-one {
+
+    width: 720px;
+
+    height: 270px;
+
+    transform:
+        translate(-50%,
+            -50%) rotate(-18deg);
+}
+
+
+/* ---------------------------------------------------------
+   ORBIT TWO
+--------------------------------------------------------- */
+
+.navo-hero-orbit-two {
+
+    width: 920px;
+
+    height: 370px;
+
+    border-color:
+        rgba(108,
+            141,
+            255,
+            0.075);
+
+    transform:
+        translate(-50%,
+            -50%) rotate(22deg);
+}
+
+
+/* ---------------------------------------------------------
+   ORBIT THREE
+--------------------------------------------------------- */
+
+.navo-hero-orbit-three {
+
+    width: 580px;
+
+    height: 580px;
+
+    border-color:
+        rgba(81,
+            224,
+            255,
+            0.045);
+
+    transform:
+        translate(-50%,
+            -50%) rotate(36deg);
+}
+
+
+/* =========================================================
+   OBJECT SYSTEM
+========================================================= */
+
+.navo-hero-object-system {
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 25%;
+
+    right: 20%;
+
+    width: 410px;
+
+    height: 410px;
+
+    transform:
+        translate(50%,
+            -50%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   OBJECT HALO
+========================================================= */
+
+.navo-hero-object-halo {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 320px;
+
+    height: 320px;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(102,
+                209,
+                255,
+                0.18),
+            rgba(91,
+                124,
+                255,
+                0.07) 38%,
+            transparent 72%);
+
+    filter:
+        blur(18px);
+}
+
+
+/* =========================================================
+   OBJECT ORBITS
+========================================================= */
+
+.navo-hero-object-orbit {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    border:
+        1px solid rgba(186,
+            221,
+            255,
+            0.22);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 18px rgba(65,
+            209,
+            255,
+            0.08);
+}
+
+
+/* ---------------------------------------------------------
+   OBJECT ORBIT ONE
+--------------------------------------------------------- */
+
+.navo-hero-object-orbit-one {
+
+    width: 420px;
+
+    height: 150px;
+
+    transform:
+        translate(-50%,
+            -50%) rotate(-22deg);
+}
+
+
+/* ---------------------------------------------------------
+   OBJECT ORBIT TWO
+--------------------------------------------------------- */
+
+.navo-hero-object-orbit-two {
+
+    width: 300px;
+
+    height: 430px;
+
+    border-color:
+        rgba(148,
+            125,
+            255,
+            0.14);
+
+    transform:
+        translate(-50%,
+            -50%) rotate(38deg);
+}
+
+
+/* =========================================================
+   FUTURISTIC DEVICE
+========================================================= */
+
+.navo-hero-device {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 230px;
+
+    height: 145px;
+
+    transform:
+        translate(-50%,
+            -50%) rotate(-18deg);
+
+    filter:
+        drop-shadow(0 35px 45px rgba(0,
+                0,
+                0,
+                0.58));
+}
+
+
+/* =========================================================
+   DEVICE SHELL
+========================================================= */
+
+.navo-hero-device-shell {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius:
+        58% 42% 48% 52% / 56% 50% 50% 44%;
+
+    background:
+        linear-gradient(145deg,
+            #e8f2f7 0%,
+            #9ca9b5 24%,
+            #2d343c 48%,
+            #0e1218 75%,
+            #05070a 100%);
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.32);
+
+    box-shadow:
+
+        inset 8px 8px 18px rgba(255,
+            255,
+            255,
+            0.12),
+
+        inset -12px -12px 25px rgba(0,
+            0,
+            0,
+            0.55);
+}
+
+
+/* =========================================================
+   DEVICE HIGHLIGHT
+========================================================= */
+
+.navo-hero-device-highlight {
+
+    position: absolute;
+
+    top: 13%;
+
+    left: 12%;
+
+    width: 48%;
+
+    height: 18%;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.32);
+
+    filter:
+        blur(7px);
+
+    transform:
+        rotate(-5deg);
+}
+
+
+/* =========================================================
+   DEVICE CORE
+========================================================= */
+
+.navo-hero-device-core {
+
+    position: absolute;
+
+    left: 48%;
+
+    top: 50%;
+
+    width: 46px;
+
+    height: 46px;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            #dffbff 0%,
+            #6be8ff 18%,
+            #4673ff 43%,
+            #161b29 70%,
+            #050609 100%);
+
+    box-shadow:
+
+        0 0 18px rgba(83,
+            226,
+            255,
+            0.65),
+
+        0 0 55px rgba(76,
+            107,
+            255,
+            0.25);
+}
+
+
+/* =========================================================
+   DEVICE DETAILS
+========================================================= */
+
+.navo-hero-device-detail {
+
+    position: absolute;
+
+    height: 1px;
+
+    background:
+        rgba(196,
+            237,
+            255,
+            0.48);
+
+    box-shadow:
+        0 0 6px rgba(91,
+            225,
+            255,
+            0.3);
+}
+
+
+/* ---------------------------------------------------------
+   DETAIL ONE
+--------------------------------------------------------- */
+
+.navo-hero-device-detail-one {
+
+    width: 74px;
+
+    left: 18%;
+
+    top: 53%;
+}
+
+
+/* ---------------------------------------------------------
+   DETAIL TWO
+--------------------------------------------------------- */
+
+.navo-hero-device-detail-two {
+
+    width: 38px;
+
+    right: 8%;
+
+    top: 39%;
+
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.navo-hero-particle {
+
+    position: absolute;
+
+    display: block;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+        #9beeff;
+
+    box-shadow:
+        0 0 14px rgba(101,
+            230,
+            255,
+            0.9);
+}
+
+
+/* ---------------------------------------------------------
+   PARTICLE ONE
+--------------------------------------------------------- */
+
+.navo-hero-particle-one {
+
+    left: 8%;
+
+    top: 24%;
+}
+
+
+/* ---------------------------------------------------------
+   PARTICLE TWO
+--------------------------------------------------------- */
+
+.navo-hero-particle-two {
+
+    right: 8%;
+
+    top: 32%;
+
+    width: 3px;
+
+    height: 3px;
+
+    opacity: 0.7;
+}
+
+
+/* ---------------------------------------------------------
+   PARTICLE THREE
+--------------------------------------------------------- */
+
+.navo-hero-particle-three {
+
+    right: 24%;
+
+    bottom: 22%;
+
+    width: 2px;
+
+    height: 2px;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   TERRAIN
+========================================================= */
+
+.navo-hero-terrain {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 29%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TERRAIN LIGHT
+========================================================= */
+
+.navo-hero-terrain-light {
+
+    position: absolute;
+
+    left: 18%;
+
+    bottom: 26%;
+
+    width: 60%;
+
+    height: 60px;
+
+    background:
+        radial-gradient(ellipse,
+            rgba(97,
+                162,
+                200,
+                0.12),
+            transparent 68%);
+
+    filter:
+        blur(25px);
+}
+
+
+/* =========================================================
+   TERRAIN SURFACE
+========================================================= */
+
+.navo-hero-terrain-surface {
+
+    position: absolute;
+
+    left: -5%;
+
+    bottom: -42%;
+
+    width: 110%;
+
+    height: 100%;
+
+    border-radius:
+        50% 50% 0 0;
+
+    background:
+
+        radial-gradient(ellipse at 50% 10%,
+            rgba(73,
+                86,
+                100,
+                0.30),
+            transparent 38%),
+
+        linear-gradient(to bottom,
+            #11151a,
+            #080a0e 48%,
+            #050609 100%);
+
+    border-top:
+        1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    box-shadow:
+        0 -25px 80px rgba(0,
+            0,
+            0,
+            0.45);
+}
+
+
+/* =========================================================
+   HERO CONTENT CONTAINER
+========================================================= */
+
+.navo-hero-container {
+
+    position: relative;
+
+    z-index: 10;
+
+    width:
+        min(1440px,
+            calc(100% - 80px));
+
+    height: 100%;
+
+    margin:
+        0 auto;
+
+    padding:
+        145px 0 120px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.navo-hero-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    width: max-content;
+
+    font-family:
+        var(--navo-font-mono);
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing:
+        0.16em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.56);
+}
+
+
+/* =========================================================
+   EYEBROW LINE
+========================================================= */
+
+.navo-hero-eyebrow span {
+
+    display: block;
+
+    width: 34px;
+
+    height: 1px;
+
+    background:
+        var(--navo-cyan);
+
+    box-shadow:
+        0 0 10px rgba(101,
+            230,
+            255,
+            0.45);
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.navo-hero-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width:
+        max-content;
+
+    margin:
+        32px 0 0;
+
+    font-size:
+        clamp(86px,
+            10.5vw,
+            158px);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.78;
+
+    letter-spacing:
+        -0.085em;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   TITLE SECOND LINE
+========================================================= */
+
+.navo-hero-title span:last-child {
+
+    margin-left:
+        0.43em;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.30);
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.navo-hero-description {
+
+    margin:
+        42px 0 0;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    letter-spacing:
+        -0.015em;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.70);
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+
+.navo-hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 32px;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.navo-hero-primary-button {
+
+    min-height: 46px;
+
+    padding:
+        0 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    color:
+        #050609;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing:
+        0.02em;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        gap 0.3s ease;
+}
+
+
+.navo-hero-primary-button:hover {
+
+    color:
+        #ffffff;
+
+    background:
+        transparent;
+
+    transform:
+        translateY(-2px);
+
+    gap: 23px;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.navo-hero-secondary-button {
+
+    min-height: 46px;
+
+    padding:
+        0 19px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.82);
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.025);
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.18);
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.navo-hero-secondary-button:hover {
+
+    color:
+        #ffffff;
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.08);
+
+    border-color:
+        rgba(255,
+            255,
+            255,
+            0.35);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.navo-hero-bottom {
+
+    position: absolute;
+
+    z-index: 12;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    width:
+        min(1440px,
+            calc(100% - 80px));
+
+    transform:
+        translateX(-50%);
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: end;
+}
+
+
+/* =========================================================
+   BOTTOM LEFT
+========================================================= */
+
+.navo-hero-bottom-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.navo-hero-bottom-left span {
+
+    font-family:
+        var(--navo-font-mono);
+
+    font-size: 10px;
+
+    color:
+        var(--navo-cyan);
+
+    letter-spacing:
+        0.10em;
+}
+
+
+.navo-hero-bottom-left p {
+
+    margin: 0;
+
+    font-family:
+        var(--navo-font-mono);
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.34);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.navo-hero-scroll {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-family:
+        var(--navo-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.34);
+}
+
+
+/* =========================================================
+   SCROLL LINE
+========================================================= */
+
+.navo-hero-scroll-line {
+
+    position: relative;
+
+    width: 1px;
+
+    height: 30px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.16);
+}
+
+
+.navo-hero-scroll-line span {
+
+    display: block;
+
+    width: 1px;
+
+    height: 100%;
+
+    background:
+        #ffffff;
+
+    transform-origin:
+        top;
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.navo-hero-year {
+
+    justify-self: end;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    font-family:
+        var(--navo-font-mono);
+
+    font-size: 9px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.46);
+}
+
+
+.navo-hero-year span:nth-child(2) {
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.22);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+
+    /* -------------------------------------------------------
+       HERO
+    ------------------------------------------------------- */
+
+    .navo-hero {
+
+        min-height:
+            760px;
+
+        height:
+            100svh;
+    }
+
+
+    /* -------------------------------------------------------
+       CONTAINER
+    ------------------------------------------------------- */
+
+    .navo-hero-container {
+
+        width:
+            calc(100% - 56px);
+
+        padding:
+            130px 0 110px;
+    }
+
+
+    /* -------------------------------------------------------
+       TITLE
+    ------------------------------------------------------- */
+
+    .navo-hero-title {
+
+        font-size:
+            clamp(76px,
+                12vw,
+                125px);
+    }
+
+
+    /* -------------------------------------------------------
+       OBJECT
+    ------------------------------------------------------- */
+
+    .navo-hero-object-system {
+
+        right: 11%;
+
+        top: 47%;
+
+        transform:
+            translate(50%,
+                -50%) scale(0.82);
+    }
+
+
+    /* -------------------------------------------------------
+       ORBITS
+    ------------------------------------------------------- */
+
+    .navo-hero-orbits {
+
+        right: -15%;
+
+        width: 72%;
+    }
+
+
+    .navo-hero-orbit-one {
+
+        width: 600px;
+
+        height: 230px;
+    }
+
+
+    .navo-hero-orbit-two {
+
+        width: 760px;
+
+        height: 320px;
+    }
+
+
+    .navo-hero-orbit-three {
+
+        width: 500px;
+
+        height: 500px;
+    }
+
+
+    /* -------------------------------------------------------
+       HORIZON
+    ------------------------------------------------------- */
+
+    .navo-hero-horizon {
+
+        width: 78%;
+
+        right: -18%;
+    }
+
+
+    /* -------------------------------------------------------
+       BOTTOM
+    ------------------------------------------------------- */
+
+    .navo-hero-bottom {
+
+        width:
+            calc(100% - 56px);
+
+        bottom: 24px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+
+    /* -------------------------------------------------------
+       HERO
+    ------------------------------------------------------- */
+
+    .navo-hero {
+
+        min-height:
+            760px;
+
+        height:
+            100svh;
+
+        background:
+
+            radial-gradient(circle at 70% 35%,
+                rgba(54,
+                    70,
+                    125,
+                    0.22),
+                transparent 38%),
+
+            radial-gradient(circle at 50% 72%,
+                rgba(111,
+                    53,
+                    178,
+                    0.12),
+                transparent 34%),
+
+            #050609;
+    }
+
+
+    /* -------------------------------------------------------
+       GRID
+    ------------------------------------------------------- */
+
+    .navo-hero-grid {
+
+        opacity: 0.13;
+
+        background-size:
+            52px 52px;
+    }
+
+
+    /* -------------------------------------------------------
+       ATMOSPHERE
+    ------------------------------------------------------- */
+
+    .navo-hero-glow-one {
+
+        width: 400px;
+
+        height: 400px;
+
+        top: 10%;
+
+        left: 72%;
+    }
+
+
+    .navo-hero-glow-two {
+
+        width: 320px;
+
+        height: 320px;
+
+        right: -120px;
+
+        bottom: 15%;
+    }
+
+
+    .navo-hero-glow-three {
+
+        width: 220px;
+
+        height: 220px;
+
+        left: -80px;
+
+        top: 52%;
+    }
+
+
+    /* -------------------------------------------------------
+       HORIZON
+    ------------------------------------------------------- */
+
+    .navo-hero-horizon {
+
+        right: -48%;
+
+        bottom: 17%;
+
+        width: 120%;
+
+        height: 31%;
+
+        transform:
+            rotate(-5deg);
+    }
+
+
+    .navo-hero-horizon-glow {
+
+        width: 75%;
+
+        left: 8%;
+    }
+
+
+    /* -------------------------------------------------------
+       ORBITS
+    ------------------------------------------------------- */
+
+    .navo-hero-orbits {
+
+        top: 29%;
+
+        right: -35%;
+
+        width: 125%;
+
+        height: 48%;
+    }
+
+
+    .navo-hero-orbit-one {
+
+        width: 470px;
+
+        height: 170px;
+    }
+
+
+    .navo-hero-orbit-two {
+
+        width: 590px;
+
+        height: 245px;
+    }
+
+
+    .navo-hero-orbit-three {
+
+        width: 390px;
+
+        height: 390px;
+    }
+
+
+    /* -------------------------------------------------------
+       OBJECT
+    ------------------------------------------------------- */
+
+    .navo-hero-object-system {
+
+        top: 47%;
+
+        right: 2%;
+
+        width: 330px;
+
+        height: 330px;
+
+        transform:
+            translate(50%,
+                -50%) scale(0.74);
+    }
+
+
+    /* -------------------------------------------------------
+       TERRAIN
+    ------------------------------------------------------- */
+
+    .navo-hero-terrain {
+
+        height: 26%;
+    }
+
+
+    .navo-hero-terrain-surface {
+
+        bottom: -47%;
+
+        width: 145%;
+
+        left: -22%;
+    }
+
+
+    /* -------------------------------------------------------
+       CONTENT
+    ------------------------------------------------------- */
+
+    .navo-hero-container {
+
+        width:
+            calc(100% - 40px);
+
+        height: 100%;
+
+        padding:
+            112px 0 130px;
+    }
+
+
+    /* -------------------------------------------------------
+       EYEBROW
+    ------------------------------------------------------- */
+
+    .navo-hero-eyebrow {
+
+        gap: 9px;
+
+        font-size: 8px;
+
+        letter-spacing:
+            0.13em;
+    }
+
+
+    .navo-hero-eyebrow span {
+
+        width: 24px;
+    }
+
+
+    /* -------------------------------------------------------
+       TITLE
+    ------------------------------------------------------- */
+
+    .navo-hero-title {
+
+        margin-top: 27px;
+
+        font-size:
+            clamp(58px,
+                18vw,
+                88px);
+
+        line-height:
+            0.80;
+
+        letter-spacing:
+            -0.085em;
+    }
+
+
+    .navo-hero-title span:last-child {
+
+        margin-left:
+            0.30em;
+    }
+
+
+    /* -------------------------------------------------------
+       DESCRIPTION
+    ------------------------------------------------------- */
+
+    .navo-hero-description {
+
+        margin-top: 31px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -------------------------------------------------------
+       ACTIONS
+    ------------------------------------------------------- */
+
+    .navo-hero-actions {
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin-top: 26px;
+    }
+
+
+    .navo-hero-primary-button,
+    .navo-hero-secondary-button {
+
+        min-height: 44px;
+
+        font-size: 10px;
+    }
+
+
+    .navo-hero-primary-button {
+
+        padding:
+            0 15px;
+
+        gap: 13px;
+    }
+
+
+    .navo-hero-secondary-button {
+
+        padding:
+            0 16px;
+    }
+
+
+    /* -------------------------------------------------------
+       BOTTOM
+    ------------------------------------------------------- */
+
+    .navo-hero-bottom {
+
+        left: 20px;
+
+        bottom: 20px;
+
+        width:
+            calc(100% - 40px);
+
+        transform: none;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr auto;
+
+        grid-template-rows:
+            auto auto;
+
+        row-gap: 14px;
+    }
+
+
+    /* -------------------------------------------------------
+       BOTTOM LEFT
+    ------------------------------------------------------- */
+
+    .navo-hero-bottom-left {
+
+        gap: 8px;
+    }
+
+
+    .navo-hero-bottom-left span {
+
+        font-size: 9px;
+    }
+
+
+    .navo-hero-bottom-left p {
+
+        font-size: 7px;
+
+        letter-spacing:
+            0.10em;
+    }
+
+
+    /* -------------------------------------------------------
+       SCROLL
+    ------------------------------------------------------- */
+
+    .navo-hero-scroll {
+
+        display: none;
+    }
+
+
+    /* -------------------------------------------------------
+       YEAR
+    ------------------------------------------------------- */
+
+    .navo-hero-year {
+
+        font-size: 8px;
+
+        gap: 8px;
+    }
+
+
+    /* -------------------------------------------------------
+       PARTICLES
+    ------------------------------------------------------- */
+
+    .navo-hero-particle-one {
+
+        left: 12%;
+
+        top: 31%;
+    }
+
+
+    .navo-hero-particle-two {
+
+        right: 12%;
+
+        top: 39%;
+    }
+
+
+    .navo-hero-particle-three {
+
+        right: 29%;
+
+        bottom: 28%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+
+    .navo-hero {
+
+        min-height:
+            720px;
+    }
+
+
+    .navo-hero-container {
+
+        width:
+            calc(100% - 32px);
+
+        padding-top:
+            105px;
+    }
+
+
+    .navo-hero-title {
+
+        font-size:
+            clamp(52px,
+                17.5vw,
+                70px);
+    }
+
+
+    .navo-hero-description {
+
+        font-size:
+            13px;
+    }
+
+
+    .navo-hero-primary-button,
+    .navo-hero-secondary-button {
+
+        min-height:
+            42px;
+    }
+
+
+    .navo-hero-bottom {
+
+        left: 16px;
+
+        width:
+            calc(100% - 32px);
+    }
+
+
+    .navo-hero-object-system {
+
+        right: -3%;
+
+        transform:
+            translate(50%,
+                -50%) scale(0.65);
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navo-hero-object-system {
+
+        transform:
+            translate(50%,
+                -50%);
+    }
+
+    .navo-hero-scroll-line span {
+
+        animation: none;
+    }
+}
