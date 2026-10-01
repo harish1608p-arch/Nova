@@ -1,3006 +1,6206 @@
 /* =========================================================
-   N∆VO — 2026 PRODUCT SYSTEM
+
+   Nâˆ†VO Ã¢â‚¬â€ 2026 PRODUCT SYSTEM
+
    STEP 5
 
+
+
    Product storytelling system
+
    Desktop / Laptop / Tablet / Mobile
+
 ========================================================= */
+
+
+
 
 
 /* =========================================================
+
    SECTION
+
 ========================================================= */
+
+
 
 .navo-products-2026 {
 
+
+
     position: relative;
+
+
 
     width: 100%;
 
+
+
     min-height: 100vh;
 
+
+
     padding:
+
         150px 0 90px;
 
+
+
     overflow: hidden;
+
+
 
     color: #ffffff;
 
+
+
     background:
 
+
+
         radial-gradient(circle at 76% 12%,
+
             rgba(48,
+
                 61,
+
                 105,
+
                 0.18),
+
             transparent 32%),
 
+
+
         radial-gradient(circle at 15% 78%,
+
             rgba(0,
+
                 196,
+
                 255,
+
                 0.055),
+
             transparent 26%),
 
+
+
         #08090d;
+
 }
+
+
+
 
 
 /* =========================================================
+
    BACKGROUND
+
 ========================================================= */
+
+
 
 .navo-products-background {
 
+
+
     position: absolute;
+
+
 
     inset: 0;
 
+
+
     z-index: 0;
+
+
 
     pointer-events: none;
 
+
+
     overflow: hidden;
+
 }
+
+
+
 
 
 .navo-products-background-grid {
 
+
+
     position: absolute;
+
+
 
     inset: 0;
 
+
+
     opacity: 0.15;
+
+
 
     background-image:
 
+
+
         linear-gradient(rgba(255,
+
                 255,
+
                 255,
+
                 0.035) 1px,
+
             transparent 1px),
 
+
+
         linear-gradient(90deg,
+
             rgba(255,
+
                 255,
+
                 255,
+
                 0.035) 1px,
+
             transparent 1px);
 
+
+
     background-size:
+
         82px 82px;
 
+
+
     mask-image:
+
         linear-gradient(to bottom,
+
             black,
+
             transparent 92%);
 
+
+
     -webkit-mask-image:
+
         linear-gradient(to bottom,
+
             black,
+
             transparent 92%);
+
 }
+
+
+
 
 
 .navo-products-background-glow {
 
+
+
     position: absolute;
+
+
 
     width: 720px;
 
+
+
     height: 720px;
+
+
 
     top: 0;
 
+
+
     right: -240px;
+
+
 
     border-radius: 50%;
 
+
+
     background:
+
         radial-gradient(circle,
+
             rgba(72,
+
                 93,
+
                 170,
+
                 0.12),
+
             transparent 67%);
 
+
+
     filter:
+
         blur(30px);
+
 }
 
 
+
+
+
 /* =========================================================
+
    HEADING
+
 ========================================================= */
+
+
 
 .navo-products-heading {
 
+
+
     position: relative;
+
+
 
     z-index: 2;
 
+
+
     width:
+
         min(calc(100% - 64px),
+
             1440px);
 
+
+
     margin:
+
         0 auto;
+
 }
+
+
+
 
 
 /* =========================================================
+
    EYEBROW
+
 ========================================================= */
+
+
 
 .navo-section-eyebrow {
 
+
+
     display: flex;
+
+
 
     align-items: center;
 
+
+
     gap: 10px;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.45);
+
+
 
     font-size: 9px;
 
+
+
     font-weight: 600;
+
+
 
     line-height: 1;
 
+
+
     letter-spacing:
+
         0.18em;
+
 }
+
+
+
 
 
 .navo-section-eyebrow span {
 
+
+
     display: block;
+
+
 
     width: 25px;
 
+
+
     height: 1px;
 
+
+
     background:
+
         #00e5ff;
 
+
+
     box-shadow:
+
         0 0 10px rgba(0,
+
             229,
+
             255,
+
             0.4);
+
 }
+
+
+
 
 
 /* =========================================================
+
    TITLE ROW
+
 ========================================================= */
+
+
 
 .navo-products-title-row {
 
+
+
     margin-top: 28px;
+
+
 
     display: flex;
 
+
+
     align-items: flex-end;
+
+
 
     justify-content: space-between;
 
+
+
     gap: 50px;
+
 }
+
+
+
 
 
 .navo-products-title-row h2 {
 
+
+
     margin: 0;
 
+
+
     font-size:
+
         clamp(60px,
+
             8vw,
+
             118px);
+
+
 
     font-weight: 500;
 
+
+
     line-height: 0.86;
 
+
+
     letter-spacing:
+
         -0.07em;
+
 }
+
+
+
 
 
 .navo-products-title-row h2 em {
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.30);
+
+
 
     font-style: normal;
 
+
+
     font-weight: 500;
+
 }
+
+
+
 
 
 .navo-products-title-row p {
 
+
+
     margin:
+
         0 4% 7px 0;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.42);
+
+
 
     font-size: 13px;
 
+
+
     line-height: 1.55;
+
 }
+
+
+
 
 
 /* =========================================================
+
    INTRO
+
 ========================================================= */
+
+
 
 .navo-products-intro {
 
+
+
     position: relative;
+
+
 
     z-index: 2;
 
+
+
     width:
+
         min(calc(100% - 64px),
+
             1440px);
 
+
+
     margin:
+
         100px auto 38px;
+
+
 
     display: grid;
 
+
+
     grid-template-columns:
+
         70px minmax(100px,
+
             1fr) 280px;
+
+
 
     gap: 25px;
 
+
+
     align-items: center;
+
 }
+
+
+
 
 
 .navo-products-intro>span {
 
+
+
     color:
+
         #00e5ff;
+
+
 
     font-size: 10px;
 
+
+
     font-weight: 500;
 
+
+
     letter-spacing:
+
         0.12em;
+
 }
+
+
+
 
 
 .navo-intro-line {
 
+
+
     height: 1px;
 
+
+
     background:
+
         rgba(255,
+
             255,
+
             255,
+
             0.12);
+
 }
+
+
+
 
 
 .navo-products-intro p {
 
+
+
     margin: 0;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.42);
+
+
 
     font-size: 11px;
 
+
+
     line-height: 1.55;
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT GRID
+
 ========================================================= */
+
+
 
 .navo-products-grid {
 
+
+
     position: relative;
+
+
 
     z-index: 2;
 
+
+
     width:
+
         min(calc(100% - 64px),
+
             1440px);
 
+
+
     margin:
+
         0 auto;
+
+
 
     display: grid;
 
+
+
     grid-template-columns:
+
         1fr 1fr;
 
+
+
     gap: 12px;
+
 }
+
+
+
 
 
 /* =========================================================
+
    PRODUCT CARD
+
 ========================================================= */
+
+
 
 .navo-product-card {
 
+
+
     position: relative;
+
+
 
     min-height: 590px;
 
+
+
     overflow: hidden;
 
+
+
     background:
+
         linear-gradient(145deg,
+
             rgba(255,
+
                 255,
+
                 255,
+
                 0.045),
+
             rgba(255,
+
                 255,
+
                 255,
+
                 0.012));
 
+
+
     border:
+
         1px solid rgba(255,
+
             255,
+
             255,
+
             0.08);
 
+
+
     transition:
+
         transform 0.45s ease,
+
         border-color 0.45s ease,
+
         box-shadow 0.45s ease;
+
 }
+
+
+
 
 
 .navo-product-card:hover {
 
+
+
     transform:
+
         translateY(-6px);
 
+
+
     border-color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.20);
 
+
+
     box-shadow:
+
         0 30px 80px rgba(0,
+
             0,
+
             0,
+
             0.28);
+
 }
 
 
+
+
+
 /* =========================================================
+
    FEATURED CARD
+
 ========================================================= */
+
+
 
 .navo-product-card-featured {
 
+
+
     grid-column:
+
         span 2;
 
+
+
     min-height:
+
         650px;
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT VISUAL
+
 ========================================================= */
+
+
 
 .navo-product-visual {
 
+
+
     position: absolute;
 
+
+
     inset: 0;
+
+
 
     overflow: hidden;
 
+
+
     background:
+
         #0b0d12;
+
 }
+
+
+
 
 
 /* =========================================================
+
    VISUAL BACKGROUND
+
 ========================================================= */
+
+
 
 .navo-product-visual-background {
 
+
+
     position: absolute;
+
+
 
     inset: 0;
 
+
+
     background:
 
+
+
         radial-gradient(circle at 50% 42%,
+
             rgba(0,
+
                 229,
+
                 255,
+
                 0.09),
+
             transparent 28%),
 
+
+
         linear-gradient(145deg,
+
             rgba(255,
+
                 255,
+
                 255,
+
                 0.025),
+
             transparent 50%);
+
 }
+
+
+
 
 
 .navo-product-visual-loop .navo-product-visual-background {
 
+
+
     background:
 
+
+
         radial-gradient(circle at 50% 42%,
+
             rgba(125,
+
                 91,
+
                 255,
+
                 0.11),
+
             transparent 30%),
 
+
+
         #0b0d12;
+
 }
+
+
+
 
 
 .navo-product-visual-vision .navo-product-visual-background {
 
+
+
     background:
 
+
+
         radial-gradient(circle at 50% 42%,
+
             rgba(112,
+
                 224,
+
                 255,
+
                 0.09),
+
             transparent 30%),
 
+
+
         #0b0d12;
+
 }
+
+
+
 
 
 .navo-product-visual-one .navo-product-visual-background {
 
+
+
     background:
 
+
+
         radial-gradient(circle at 50% 42%,
+
             rgba(112,
+
                 127,
+
                 255,
+
                 0.10),
+
             transparent 30%),
 
+
+
         #0b0d12;
+
 }
 
 
+
+
+
 /* =========================================================
+
    VISUAL GRID
+
 ========================================================= */
+
+
 
 .navo-product-visual-grid {
 
+
+
     position: absolute;
+
+
 
     inset: 0;
 
+
+
     opacity: 0.22;
+
+
 
     background-image:
 
+
+
         linear-gradient(rgba(255,
+
                 255,
+
                 255,
+
                 0.025) 1px,
+
             transparent 1px),
 
+
+
         linear-gradient(90deg,
+
             rgba(255,
+
                 255,
+
                 255,
+
                 0.025) 1px,
+
             transparent 1px);
 
+
+
     background-size:
+
         62px 62px;
 
+
+
     mask-image:
+
         radial-gradient(circle at center,
+
             black,
+
             transparent 76%);
 
+
+
     -webkit-mask-image:
+
         radial-gradient(circle at center,
+
             black,
+
             transparent 76%);
+
 }
+
+
+
 
 
 /* =========================================================
+
    VISUAL GLOW
+
 ========================================================= */
+
+
 
 .navo-product-visual-glow {
 
+
+
     position: absolute;
+
+
 
     left: 50%;
 
+
+
     top: 47%;
+
+
 
     width: 320px;
 
+
+
     height: 320px;
 
+
+
     transform:
+
         translate(-50%,
+
             -50%);
+
+
 
     border-radius: 50%;
 
+
+
     background:
+
         rgba(0,
+
             229,
+
             255,
+
             0.055);
 
+
+
     filter:
+
         blur(60px);
 
+
+
     transition:
+
         transform 0.7s ease;
+
 }
+
+
+
 
 
 .navo-product-card:hover .navo-product-visual-glow {
 
+
+
     transform:
+
         translate(-50%,
+
             -50%) scale(1.25);
+
 }
+
+
+
 
 
 /* =========================================================
+
    PRODUCT LIGHTS
+
 ========================================================= */
+
+
 
 .navo-product-light {
 
+
+
     position: absolute;
+
+
 
     border-radius: 50%;
 
+
+
     pointer-events: none;
 
+
+
     filter:
+
         blur(22px);
 
+
+
     opacity: 0.5;
+
 }
+
+
+
 
 
 .navo-product-light-one {
 
+
+
     width: 180px;
+
+
 
     height: 40px;
 
+
+
     left: 25%;
+
+
 
     top: 25%;
 
+
+
     background:
+
         rgba(133,
+
             230,
+
             255,
+
             0.07);
 
+
+
     transform:
+
         rotate(-20deg);
+
 }
+
+
+
 
 
 .navo-product-light-two {
 
+
+
     width: 150px;
+
+
 
     height: 30px;
 
+
+
     right: 20%;
+
+
 
     bottom: 32%;
 
+
+
     background:
+
         rgba(135,
+
             102,
+
             255,
+
             0.06);
 
+
+
     transform:
+
         rotate(25deg);
+
 }
+
+
+
 
 
 /* =========================================================
+
    ORBITS
+
 ========================================================= */
+
+
 
 .navo-product-orbit {
 
+
+
     position: absolute;
+
+
 
     left: 50%;
 
+
+
     top: 45%;
 
+
+
     border:
+
         1px solid rgba(255,
+
             255,
+
             255,
+
             0.07);
+
+
 
     border-radius: 50%;
 
+
+
     pointer-events: none;
+
 }
+
+
+
 
 
 .navo-product-orbit-one {
 
+
+
     width: 480px;
+
+
 
     height: 190px;
 
+
+
     transform:
+
         translate(-50%,
+
             -50%) rotate(-18deg);
+
 }
+
+
+
 
 
 .navo-product-orbit-two {
 
+
+
     width: 590px;
+
+
 
     height: 245px;
 
+
+
     border-color:
+
         rgba(99,
+
             157,
+
             255,
+
             0.035);
 
+
+
     transform:
+
         translate(-50%,
+
             -50%) rotate(24deg);
+
 }
+
+
+
 
 
 /* =========================================================
+
    PRODUCT OBJECT
+
 ========================================================= */
+
+
 
 .navo-product-object {
 
+
+
     position: absolute;
+
+
 
     left: 50%;
 
+
+
     top: 45%;
+
+
 
     z-index: 3;
 
+
+
     width: 260px;
+
+
 
     height: 220px;
 
+
+
     transform:
+
         translate(-50%,
+
             -50%);
+
+
 
     display: flex;
 
+
+
     align-items: center;
+
+
 
     justify-content: center;
 
+
+
     filter:
+
         drop-shadow(0 30px 45px rgba(0,
+
                 0,
+
                 0,
+
                 0.55));
 
+
+
     transition:
+
         transform 0.65s cubic-bezier(0.22,
+
             1,
+
             0.36,
+
             1);
+
 }
+
+
+
 
 
 .navo-product-card:hover .navo-product-object {
 
+
+
     transform:
+
         translate(-50%,
+
             -50%) translateY(-8px);
+
 }
+
+
+
 
 
 /* =========================================================
-   N∆VO AIR
+
+   Nâˆ†VO AIR
+
 ========================================================= */
+
+
 
 .product-render-air {
 
+
+
     position: relative;
+
+
 
     width: 230px;
 
+
+
     height: 170px;
 
+
+
     transform:
+
         rotate(-7deg);
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    AIR CASE
+
 --------------------------------------------------------- */
+
+
 
 .product-air-case {
 
+
+
     position: absolute;
+
+
 
     left: 50%;
 
+
+
     top: 50%;
+
+
 
     width: 190px;
 
+
+
     height: 120px;
 
+
+
     transform:
+
         translate(-50%,
+
             -50%);
 
+
+
     border-radius:
+
         42px 42px 34px 34px;
 
+
+
     background:
+
         linear-gradient(145deg,
+
             #e9eef2,
+
             #929ba3 35%,
+
             #252b31 70%,
+
             #0d1116);
 
+
+
     border:
+
         1px solid rgba(255,
+
             255,
+
             255,
+
             0.28);
+
+
 
     box-shadow:
 
+
+
         inset 0 2px 4px rgba(255,
+
             255,
+
             255,
+
             0.25),
 
+
+
         inset 0 -15px 20px rgba(0,
+
             0,
+
             0,
+
             0.40),
 
+
+
         0 25px 35px rgba(0,
+
             0,
+
             0,
+
             0.38);
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    AIR CASE HIGHLIGHT
+
 --------------------------------------------------------- */
+
+
 
 .product-air-case-highlight {
 
+
+
     position: absolute;
+
+
 
     top: 8px;
 
+
+
     left: 25px;
+
+
 
     width: 90px;
 
+
+
     height: 18px;
+
+
 
     border-radius: 50%;
 
+
+
     background:
+
         rgba(255,
+
             255,
+
             255,
+
             0.20);
 
+
+
     filter:
+
         blur(7px);
 
+
+
     transform:
+
         rotate(-4deg);
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    AIR CASE INNER
+
 --------------------------------------------------------- */
+
+
 
 .product-air-case-inner {
 
+
+
     position: absolute;
+
+
 
     left: 12px;
 
+
+
     right: 12px;
+
+
 
     top: 17px;
 
+
+
     bottom: 12px;
 
+
+
     border-radius:
+
         30px 30px 25px 25px;
 
+
+
     background:
+
         linear-gradient(145deg,
+
             #0c1015,
+
             #1c232b);
 
+
+
     box-shadow:
+
         inset 0 1px rgba(255,
+
             255,
+
             255,
+
             0.08);
+
 }
+
+
+
 
 
 /* ---------------------------------------------------------
+
    AIR EARBUD
+
 --------------------------------------------------------- */
+
+
 
 .product-air-earbud {
 
+
+
     position: absolute;
+
+
 
     top: 25px;
 
+
+
     width: 31px;
+
+
 
     height: 48px;
 
+
+
     border-radius:
+
         18px 18px 13px 13px;
 
+
+
     background:
+
         linear-gradient(145deg,
+
             #ffffff,
+
             #aeb7bf 50%,
+
             #4d565f);
 
+
+
     box-shadow:
+
         0 8px 14px rgba(0,
+
             0,
+
             0,
+
             0.45);
+
 }
+
+
+
 
 
 .product-air-earbud::after {
 
+
+
     content: "";
+
+
 
     position: absolute;
 
+
+
     left: 11px;
+
+
 
     bottom: -20px;
 
+
+
     width: 8px;
+
+
 
     height: 27px;
 
+
+
     border-radius: 5px;
 
+
+
     background:
+
         linear-gradient(to right,
+
             #dce2e7,
+
             #68717a);
+
 }
+
+
+
 
 
 .product-air-earbud-left {
 
+
+
     left: 48px;
 
+
+
     transform:
+
         rotate(9deg);
+
 }
+
+
+
 
 
 .product-air-earbud-right {
 
+
+
     right: 48px;
 
+
+
     transform:
+
         rotate(-9deg);
+
 }
+
+
+
 
 
 /* =========================================================
-   N∆VO LOOP
+
+   Nâˆ†VO LOOP
+
 ========================================================= */
+
+
 
 .product-render-loop {
 
+
+
     position: relative;
+
+
 
     width: 150px;
 
+
+
     height: 230px;
+
+
 
     display: flex;
 
+
+
     justify-content: center;
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    LOOP BAND
+
 --------------------------------------------------------- */
+
+
 
 .product-loop-band {
 
+
+
     position: absolute;
+
+
 
     top: 0;
 
+
+
     width: 88px;
+
+
 
     height: 230px;
 
+
+
     border:
+
         18px solid #252a30;
 
+
+
     border-radius:
+
         50px;
 
+
+
     background:
+
         linear-gradient(90deg,
+
             #0c0f13,
+
             #515b64,
+
             #15191e);
 
+
+
     box-shadow:
+
         inset 2px 0 rgba(255,
+
             255,
+
             255,
+
             0.10),
 
+
+
         0 25px 35px rgba(0,
+
             0,
+
             0,
+
             0.40);
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    LOOP BODY
+
 --------------------------------------------------------- */
+
+
 
 .product-loop-body {
 
+
+
     position: absolute;
+
+
 
     top: 60px;
 
+
+
     width: 118px;
+
+
 
     height: 105px;
 
+
+
     border-radius:
+
         30px;
 
+
+
     background:
+
         linear-gradient(145deg,
+
             #d7dee3,
+
             #68727c 35%,
+
             #171c21 80%);
 
+
+
     border:
+
         1px solid rgba(255,
+
             255,
+
             255,
+
             0.28);
 
+
+
     box-shadow:
+
         0 25px 40px rgba(0,
+
             0,
+
             0,
+
             0.45);
+
 }
+
+
+
 
 
 /* ---------------------------------------------------------
+
    LOOP SCREEN
+
 --------------------------------------------------------- */
+
+
 
 .product-loop-screen {
 
+
+
     position: absolute;
+
+
 
     inset: 10px;
 
+
+
     display: flex;
+
+
 
     flex-direction: column;
 
+
+
     align-items: center;
+
+
 
     justify-content: center;
 
+
+
     gap: 5px;
 
+
+
     border-radius:
+
         22px;
 
+
+
     background:
+
         radial-gradient(circle at 50% 30%,
+
             #32425c,
+
             #080b10);
+
+
 
     color: #dffbff;
 
+
+
     box-shadow:
+
         inset 0 1px rgba(255,
+
             255,
+
             255,
+
             0.10);
+
 }
+
+
+
 
 
 .product-loop-screen span {
 
+
+
     font-size: 17px;
+
+
 
     font-weight: 500;
 
+
+
     letter-spacing:
+
         -0.04em;
+
 }
+
+
+
 
 
 .product-loop-screen small {
 
+
+
     font-size: 7px;
 
+
+
     letter-spacing:
+
         0.18em;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.45);
+
 }
+
+
+
 
 
 /* =========================================================
-   N∆VO VISION
+
+   Nâˆ†VO VISION
+
 ========================================================= */
+
+
 
 .product-render-vision {
 
+
+
     position: relative;
+
+
 
     width: 270px;
 
+
+
     height: 125px;
+
 }
+
+
+
 
 
 /* ---------------------------------------------------------
+
    VISION LENSES
+
 --------------------------------------------------------- */
+
+
 
 .product-vision-lens {
 
+
+
     position: absolute;
+
+
 
     top: 26px;
 
+
+
     width: 105px;
+
+
 
     height: 67px;
 
+
+
     border:
+
         2px solid rgba(214,
+
             239,
+
             255,
+
             0.70);
 
+
+
     border-radius:
+
         25px;
 
+
+
     background:
+
         linear-gradient(145deg,
+
             rgba(155,
+
                 221,
+
                 255,
+
                 0.18),
+
             rgba(35,
+
                 55,
+
                 76,
+
                 0.30));
+
+
 
     box-shadow:
 
+
+
         inset 0 1px rgba(255,
+
             255,
+
             255,
+
             0.15),
 
+
+
         0 0 25px rgba(73,
+
             206,
+
             255,
+
             0.12);
+
 }
+
+
+
 
 
 .product-vision-lens-left {
 
+
+
     left: 15px;
+
 }
+
+
+
 
 
 .product-vision-lens-right {
 
+
+
     right: 15px;
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    VISION BRIDGE
+
 --------------------------------------------------------- */
+
+
 
 .product-vision-bridge {
 
+
+
     position: absolute;
+
+
 
     left: 50%;
 
+
+
     top: 48px;
+
+
 
     width: 45px;
 
+
+
     height: 13px;
 
+
+
     transform:
+
         translateX(-50%);
 
+
+
     border-top:
+
         2px solid rgba(214,
+
             239,
+
             255,
+
             0.65);
+
 }
+
+
+
 
 
 /* ---------------------------------------------------------
+
    VISION ARMS
+
 --------------------------------------------------------- */
+
+
 
 .product-vision-arm {
 
+
+
     position: absolute;
+
+
 
     top: 34px;
 
+
+
     width: 65px;
+
+
 
     height: 12px;
 
+
+
     border-radius: 10px;
 
+
+
     background:
+
         linear-gradient(to right,
+
             #9ca9b2,
+
             #20262c);
+
 }
+
+
+
 
 
 .product-vision-arm-left {
 
+
+
     left: -42px;
 
+
+
     transform:
+
         rotate(-12deg);
+
 }
+
+
+
 
 
 .product-vision-arm-right {
 
+
+
     right: -42px;
 
+
+
     transform:
+
         rotate(12deg);
+
 }
+
+
+
 
 
 /* =========================================================
-   N∆VO ONE
+
+   Nâˆ†VO ONE
+
 ========================================================= */
+
+
 
 .product-render-one {
 
+
+
     position: relative;
+
+
 
     width: 160px;
 
+
+
     height: 250px;
+
+
 
     display: flex;
 
+
+
     justify-content: center;
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    PHONE BODY
+
 --------------------------------------------------------- */
+
+
 
 .product-one-body {
 
+
+
     position: relative;
+
+
 
     width: 132px;
 
+
+
     height: 235px;
 
+
+
     border-radius:
+
         27px;
 
+
+
     background:
+
         linear-gradient(145deg,
+
             #d9e1e6,
+
             #727d87 24%,
+
             #161b20 70%,
+
             #05070a);
 
+
+
     border:
+
         1px solid rgba(255,
+
             255,
+
             255,
+
             0.25);
+
+
 
     box-shadow:
 
+
+
         inset 3px 3px 8px rgba(255,
+
             255,
+
             255,
+
             0.12),
 
+
+
         0 30px 45px rgba(0,
+
             0,
+
             0,
+
             0.52);
+
 }
+
+
+
 
 
 /* ---------------------------------------------------------
+
    PHONE CAMERA
+
 --------------------------------------------------------- */
+
+
 
 .product-one-camera {
 
+
+
     position: absolute;
+
+
 
     top: 13px;
 
+
+
     left: 13px;
+
+
 
     width: 42px;
 
+
+
     height: 42px;
+
+
 
     display: grid;
 
+
+
     grid-template-columns:
+
         repeat(2,
+
             1fr);
+
+
 
     gap: 5px;
 
+
+
     padding: 7px;
 
+
+
     border-radius:
+
         13px;
 
+
+
     background:
+
         rgba(5,
+
             7,
+
             9,
+
             0.78);
 
+
+
     box-shadow:
+
         inset 0 1px rgba(255,
+
             255,
+
             255,
+
             0.10);
+
 }
+
+
+
 
 
 .product-one-camera span {
 
+
+
     display: block;
+
+
 
     border-radius: 50%;
 
+
+
     background:
+
         radial-gradient(circle at 35% 30%,
+
             #b8d8e7,
+
             #111820 65%);
+
 }
+
+
+
 
 
 /* ---------------------------------------------------------
+
    PHONE SCREEN
+
 --------------------------------------------------------- */
+
+
 
 .product-one-screen {
 
+
+
     position: absolute;
+
+
 
     left: 8px;
 
+
+
     right: 8px;
+
+
 
     top: 66px;
 
+
+
     bottom: 8px;
+
+
 
     display: flex;
 
+
+
     flex-direction: column;
+
+
 
     align-items: center;
 
+
+
     justify-content: center;
 
+
+
     border-radius:
+
         20px;
 
+
+
     background:
+
         radial-gradient(circle at 50% 30%,
+
             #273752,
+
             #070a0e 68%);
 
+
+
     color:
+
         #ffffff;
 
+
+
     box-shadow:
+
         inset 0 1px rgba(255,
+
             255,
+
             255,
+
             0.08);
+
 }
+
+
+
 
 
 .product-one-screen span {
 
+
+
     font-size: 9px;
 
+
+
     letter-spacing:
+
         0.18em;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.42);
+
 }
+
+
+
 
 
 .product-one-screen strong {
 
+
+
     margin-top: 12px;
+
+
 
     font-size: 40px;
 
+
+
     font-weight: 400;
 
+
+
     letter-spacing:
+
         -0.08em;
 
+
+
     background:
+
         linear-gradient(135deg,
+
             #ffffff,
+
             #80e8ff,
+
             #7e6dff);
 
+
+
     -webkit-background-clip:
+
         text;
+
+
 
     background-clip:
+
         text;
 
+
+
     color:
+
         transparent;
+
 }
+
+
+
 
 
 .product-one-screen small {
 
+
+
     margin-top: 12px;
+
+
 
     font-size: 7px;
 
+
+
     letter-spacing:
+
         0.18em;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.30);
+
 }
+
+
+
 
 
 /* ---------------------------------------------------------
+
    PHONE REFLECTION
+
 --------------------------------------------------------- */
+
+
 
 .product-one-reflection {
 
+
+
     position: absolute;
+
+
 
     top: 65px;
 
+
+
     left: 18px;
+
+
 
     width: 70px;
 
+
+
     height: 90px;
 
+
+
     border-radius:
+
         50%;
 
+
+
     background:
+
         rgba(255,
+
             255,
+
             255,
+
             0.08);
 
+
+
     filter:
+
         blur(18px);
 
+
+
     transform:
+
         rotate(-15deg);
+
 }
 
 
+
+
+
 /* =========================================================
+
    FALLBACK ICON
+
 ========================================================= */
+
+
 
 .navo-product-fallback-icon {
 
+
+
     width: 82px;
+
+
 
     height: 82px;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.65);
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT COORDINATE
+
 ========================================================= */
+
+
 
 .navo-product-coordinate {
 
+
+
     position: absolute;
+
+
 
     top: 22px;
 
+
+
     right: 24px;
+
+
 
     z-index: 5;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.24);
+
+
 
     font-size: 8px;
 
+
+
     letter-spacing:
+
         0.14em;
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT NUMBER
+
 ========================================================= */
+
+
 
 .navo-product-visual-number {
 
+
+
     position: absolute;
+
+
 
     left: 25px;
 
+
+
     top: 24px;
+
+
 
     z-index: 5;
 
+
+
     font-family:
+
         var(--navo-font-mono);
+
+
 
     font-size: 8px;
 
+
+
     letter-spacing:
+
         0.14em;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.22);
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT INFORMATION
+
 ========================================================= */
+
+
 
 .navo-product-information {
 
+
+
     position: absolute;
+
+
 
     left: 28px;
 
+
+
     right: 28px;
+
+
 
     bottom: 27px;
 
+
+
     z-index: 10;
+
 }
+
+
+
 
 
 /* =========================================================
+
    PRODUCT META
+
 ========================================================= */
+
+
 
 .navo-product-meta {
 
+
+
     display: flex;
+
+
 
     align-items: center;
 
+
+
     gap: 14px;
+
+
 
     margin-bottom: 10px;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.35);
+
+
 
     font-size: 8px;
 
+
+
     font-weight: 600;
 
+
+
     letter-spacing:
+
         0.14em;
+
 }
+
+
+
 
 
 .navo-product-meta span:first-child {
 
+
+
     color:
+
         #00e5ff;
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT NAME
+
 ========================================================= */
+
+
 
 .navo-product-information h3 {
 
+
+
     margin: 0;
+
+
 
     font-size: 30px;
 
+
+
     font-weight: 500;
+
+
 
     line-height: 1;
 
+
+
     letter-spacing:
+
         -0.045em;
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT DESCRIPTION
+
 ========================================================= */
+
+
 
 .navo-product-information p {
 
+
+
     width:
+
         min(100%,
+
             430px);
 
+
+
     margin:
+
         10px 0 16px;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.48);
+
+
 
     font-size: 11px;
 
+
+
     line-height: 1.5;
+
 }
+
+
+
 
 
 /* =========================================================
+
    PRODUCT TECHNICAL SPECS
+
 ========================================================= */
+
+
 
 .navo-product-specs {
 
+
+
     display: flex;
+
+
 
     align-items: center;
 
+
+
     gap: 15px;
+
+
 
     margin-bottom: 17px;
 
+
+
     font-size: 7px;
 
+
+
     letter-spacing:
+
         0.10em;
 
+
+
     text-transform:
+
         uppercase;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.25);
+
 }
+
+
+
 
 
 .navo-product-specs span {
 
+
+
     position: relative;
 
+
+
     white-space: nowrap;
+
 }
+
+
+
 
 
 .navo-product-specs span+span {
 
+
+
     padding-left: 15px;
+
 }
+
+
+
 
 
 .navo-product-specs span+span::before {
 
+
+
     content: "";
+
+
 
     position: absolute;
 
+
+
     left: 0;
+
+
 
     top: 50%;
 
+
+
     width: 3px;
+
+
 
     height: 3px;
 
+
+
     transform:
+
         translateY(-50%);
+
+
 
     border-radius: 50%;
 
+
+
     background:
+
         rgba(255,
+
             255,
+
             255,
+
             0.22);
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRODUCT FOOTER
+
 ========================================================= */
+
+
 
 .navo-product-footer {
 
+
+
     display: flex;
 
+
+
     align-items: center;
+
+
 
     justify-content: space-between;
 
+
+
     gap: 20px;
+
 }
 
 
+
+
+
 /* =========================================================
+
    PRICE
+
 ========================================================= */
+
+
 
 .navo-product-price {
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.82);
+
+
 
     font-size: 12px;
 
+
+
     font-weight: 500;
+
 }
+
+
+
 
 
 /* =========================================================
+
    EXPLORE BUTTON
+
 ========================================================= */
+
+
 
 .navo-product-explore {
 
+
+
     display: flex;
+
+
 
     align-items: center;
 
+
+
     gap: 8px;
 
+
+
     padding:
+
         8px 0;
 
+
+
     color:
+
         #ffffff;
 
+
+
     background:
+
         transparent;
+
+
 
     border: 0;
 
+
+
     font-size: 10px;
+
+
 
     font-weight: 500;
 
+
+
     letter-spacing:
+
         0.05em;
+
+
 
     cursor: pointer;
 
+
+
     transition:
+
         gap 0.25s ease,
+
         color 0.25s ease;
+
 }
+
+
+
 
 
 .navo-product-explore:hover {
 
+
+
     gap: 13px;
 
+
+
     color:
+
         #9beeff;
+
 }
 
 
+
+
+
 /* =========================================================
+
    BOTTOM
+
 ========================================================= */
+
+
 
 .navo-products-bottom {
 
+
+
     position: relative;
+
+
 
     z-index: 2;
 
+
+
     width:
+
         min(calc(100% - 64px),
+
             1440px);
 
+
+
     margin:
+
         55px auto 0;
 
+
+
     padding-top:
+
         25px;
+
+
 
     display: grid;
 
+
+
     grid-template-columns:
+
         1fr 1fr 1fr;
+
+
 
     align-items: start;
 
+
+
     border-top:
+
         1px solid rgba(255,
+
             255,
+
             255,
+
             0.10);
+
 }
 
 
+
+
+
 /* =========================================================
+
    BOTTOM LABEL
+
 ========================================================= */
+
+
 
 .navo-products-bottom>span {
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.30);
+
+
 
     font-size: 8px;
 
+
+
     letter-spacing:
+
         0.12em;
+
 }
 
 
+
+
+
 /* =========================================================
+
    BOTTOM COPY
+
 ========================================================= */
+
+
 
 .navo-products-bottom p {
 
+
+
     margin: 0;
 
+
+
     color:
+
         rgba(255,
+
             255,
+
             255,
+
             0.40);
+
+
 
     font-size: 10px;
 
+
+
     line-height: 1.5;
+
 }
+
+
+
 
 
 /* =========================================================
+
    COLLECTION LINK
+
 ========================================================= */
+
+
 
 .navo-products-collection-link {
 
+
+
     justify-self: end;
+
+
 
     display: flex;
 
+
+
     align-items: center;
+
+
 
     gap: 8px;
 
+
+
     color:
+
         #ffffff;
+
+
 
     text-decoration: none;
 
+
+
     font-size: 10px;
 
+
+
     transition:
+
         gap 0.25s ease,
+
         color 0.25s ease;
+
 }
+
+
+
 
 
 .navo-products-collection-link:hover {
 
+
+
     gap: 13px;
 
+
+
     color:
+
         #9beeff;
+
 }
 
 
+
+
+
 /* =========================================================
+
    TABLET
+
 ========================================================= */
+
+
 
 @media (max-width: 1024px) {
 
 
+
+
+
     .navo-products-heading,
+
     .navo-products-intro,
+
     .navo-products-grid,
+
     .navo-products-bottom {
 
+
+
         width:
+
             calc(100% - 48px);
+
     }
+
+
+
 
 
     .navo-products-title-row p {
 
+
+
         margin-right: 0;
+
     }
+
+
+
 
 
     .navo-product-card {
 
+
+
         min-height:
+
             520px;
+
     }
+
+
+
 
 
     .navo-product-card-featured {
 
+
+
         min-height:
+
             570px;
+
     }
+
+
+
 
 
     .navo-product-object {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.86);
+
     }
+
+
+
 
 
     .navo-product-card:hover .navo-product-object {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) translateY(-7px) scale(0.86);
+
     }
+
+
+
 
 
     .navo-product-information {
 
+
+
         left: 24px;
+
+
 
         right: 24px;
 
+
+
         bottom: 24px;
+
     }
+
+
+
 
 
     .navo-product-information h3 {
 
+
+
         font-size:
+
             27px;
+
     }
+
+
+
 
 
     .navo-product-orbit-one {
 
+
+
         width:
+
             400px;
 
+
+
         height:
+
             165px;
+
     }
+
+
+
 
 
     .navo-product-orbit-two {
 
+
+
         width:
+
             500px;
 
+
+
         height:
+
             210px;
+
     }
+
 }
 
 
+
+
+
 /* =========================================================
+
    TABLET PORTRAIT
+
 ========================================================= */
+
+
 
 @media (max-width: 820px) {
 
 
+
+
+
     .navo-products-title-row {
 
+
+
         align-items:
+
             flex-start;
 
+
+
         gap: 30px;
+
     }
+
+
+
 
 
     .navo-products-title-row p {
 
+
+
         max-width:
+
             220px;
 
+
+
         margin-bottom:
+
             3px;
+
     }
+
+
+
 
 
     .navo-products-grid {
 
+
+
         gap: 10px;
+
     }
+
+
+
 
 
     .navo-product-card {
 
+
+
         min-height:
+
             500px;
+
     }
+
+
+
 
 
     .navo-product-card-featured {
 
+
+
         min-height:
+
             550px;
+
     }
+
+
+
 
 
     .navo-product-specs {
 
+
+
         flex-direction:
+
             column;
 
+
+
         align-items:
+
             flex-start;
 
+
+
         gap: 5px;
+
     }
+
+
+
 
 
     .navo-product-specs span+span {
 
+
+
         padding-left: 0;
+
     }
+
+
+
 
 
     .navo-product-specs span+span::before {
 
+
+
         display:
+
             none;
+
     }
+
 }
 
 
+
+
+
 /* =========================================================
+
    MOBILE
+
 ========================================================= */
+
+
 
 @media (max-width: 640px) {
 
 
+
+
+
     .navo-products-2026 {
 
+
+
         padding:
+
             110px 0 65px;
+
     }
+
+
+
 
 
     .navo-products-heading,
+
     .navo-products-intro,
+
     .navo-products-grid,
+
     .navo-products-bottom {
 
+
+
         width:
+
             calc(100% - 40px);
+
     }
+
+
+
 
 
     /* -------------------------------------------------------
+
        TITLE
+
     ------------------------------------------------------- */
+
+
 
     .navo-products-title-row {
 
+
+
         display:
+
             block;
+
     }
+
+
+
 
 
     .navo-products-title-row h2 {
 
+
+
         font-size:
+
             clamp(57px,
+
                 17vw,
+
                 90px);
+
     }
+
+
+
 
 
     .navo-products-title-row p {
 
+
+
         max-width:
+
             none;
 
+
+
         margin-top:
+
             27px;
 
+
+
         font-size:
+
             11px;
+
     }
+
+
+
 
 
     /* -------------------------------------------------------
+
        INTRO
+
     ------------------------------------------------------- */
+
+
 
     .navo-products-intro {
 
+
+
         margin-top:
+
             70px;
 
+
+
         grid-template-columns:
+
             45px 1fr;
 
+
+
         gap:
+
             14px;
+
     }
+
+
+
 
 
     .navo-products-intro p {
 
+
+
         grid-column:
+
             2;
 
+
+
         margin-top:
+
             -5px;
+
     }
 
 
+
+
+
     /* -------------------------------------------------------
+
        PRODUCT GRID
+
     ------------------------------------------------------- */
+
+
 
     .navo-products-grid {
 
+
+
         display:
+
             flex;
 
+
+
         flex-direction:
+
             column;
 
+
+
         gap:
+
             9px;
+
     }
 
 
+
+
+
     /* -------------------------------------------------------
+
        PRODUCT CARDS
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-card,
+
     .navo-product-card-featured {
 
+
+
         min-height:
+
             480px;
 
+
+
         width:
+
             100%;
+
     }
 
 
+
+
+
     /* -------------------------------------------------------
+
        PRODUCT VISUAL
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-object {
 
+
+
         top:
+
             43%;
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.72);
+
     }
+
+
+
 
 
     .navo-product-card:hover .navo-product-object {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) translateY(-5px) scale(0.72);
+
     }
 
 
+
+
+
     /* -------------------------------------------------------
+
        AIR
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-object-air {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.76);
+
     }
 
 
+
+
+
     /* -------------------------------------------------------
+
        LOOP
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-object-loop {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.70);
+
     }
 
 
+
+
+
     /* -------------------------------------------------------
+
        VISION
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-object-vision {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.70);
+
     }
 
 
+
+
+
     /* -------------------------------------------------------
+
        ONE
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-object-one {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.68);
+
     }
+
+
+
 
 
     /* -------------------------------------------------------
+
        VISUAL ORBITS
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-orbit-one {
 
+
+
         width:
+
             300px;
 
+
+
         height:
+
             110px;
+
     }
+
+
+
 
 
     .navo-product-orbit-two {
 
+
+
         width:
+
             370px;
 
+
+
         height:
+
             150px;
+
     }
+
+
+
 
 
     /* -------------------------------------------------------
+
        INFORMATION
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-information {
 
+
+
         left:
+
             20px;
+
+
 
         right:
+
             20px;
 
+
+
         bottom:
+
             20px;
+
     }
+
+
+
 
 
     .navo-product-information h3 {
 
+
+
         font-size:
+
             26px;
+
     }
+
+
+
 
 
     .navo-product-information p {
 
+
+
         max-width:
+
             340px;
 
+
+
         margin:
+
             8px 0 13px;
 
+
+
         font-size:
+
             10px;
+
     }
+
+
+
 
 
     .navo-product-specs {
 
+
+
         margin-bottom:
+
             12px;
 
+
+
         font-size:
+
             6.5px;
+
     }
+
+
+
 
 
     .navo-product-coordinate {
 
+
+
         top:
+
             20px;
 
+
+
         right:
+
             20px;
+
     }
+
+
+
 
 
     .navo-product-visual-number {
 
+
+
         left:
+
             20px;
 
+
+
         top:
+
             21px;
+
     }
+
+
+
 
 
     /* -------------------------------------------------------
+
        BOTTOM
+
     ------------------------------------------------------- */
+
+
 
     .navo-products-bottom {
 
+
+
         grid-template-columns:
+
             1fr 1fr;
 
+
+
         row-gap:
+
             25px;
+
     }
+
+
+
 
 
     .navo-products-bottom p {
 
+
+
         text-align:
+
             right;
+
     }
+
+
+
 
 
     .navo-products-collection-link {
 
+
+
         grid-column:
+
             1 / -1;
 
+
+
         justify-self:
+
             start;
+
     }
+
 }
 
 
+
+
+
 /* =========================================================
+
    SMALL MOBILE
+
 ========================================================= */
+
+
 
 @media (max-width: 380px) {
 
 
+
+
+
     .navo-products-heading,
+
     .navo-products-intro,
+
     .navo-products-grid,
+
     .navo-products-bottom {
 
+
+
         width:
+
             calc(100% - 32px);
+
     }
+
+
+
 
 
     .navo-products-title-row h2 {
 
+
+
         font-size:
+
             54px;
+
     }
+
+
+
 
 
     .navo-product-card,
+
     .navo-product-card-featured {
 
+
+
         min-height:
+
             420px;
+
     }
+
+
+
 
 
     /* -------------------------------------------------------
+
        MOBILE PRODUCT VISUAL
+
     ------------------------------------------------------- */
+
+
 
     .navo-product-object {
 
+
+
         top:
+
             42%;
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.66);
+
     }
+
+
+
 
 
     .navo-product-card:hover .navo-product-object {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) translateY(-4px) scale(0.66);
+
     }
+
+
+
 
 
     .navo-product-object-air {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.70);
+
     }
+
+
+
 
 
     .navo-product-object-loop {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.64);
+
     }
+
+
+
 
 
     .navo-product-object-vision {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.64);
+
     }
+
+
+
 
 
     .navo-product-object-one {
 
+
+
         transform:
+
             translate(-50%,
+
                 -50%) scale(0.62);
+
     }
+
+
+
 
 
     .navo-product-information {
 
+
+
         left:
+
             16px;
+
+
 
         right:
+
             16px;
 
+
+
         bottom:
+
             16px;
+
     }
+
+
+
 
 
     .navo-product-information h3 {
 
+
+
         font-size:
+
             23px;
+
     }
+
+
+
 
 
     .navo-product-information p {
 
+
+
         max-width:
+
             250px;
 
+
+
         margin:
+
             7px 0 11px;
 
+
+
         font-size:
+
             9px;
 
+
+
         line-height:
+
             1.45;
+
     }
+
+
+
 
 
     .navo-product-specs {
 
+
+
         margin-bottom:
+
             10px;
 
+
+
         font-size:
+
             6.2px;
+
     }
+
+
+
 
 
     .navo-product-price {
 
+
+
         font-size:
+
             10.5px;
+
     }
+
 }
 
 
+
+
+
 /* =========================================================
-   ACCESSIBILITY — REDUCED MOTION
+
+   ACCESSIBILITY Ã¢â‚¬â€ REDUCED MOTION
+
 ========================================================= */
+
+
 
 @media (prefers-reduced-motion: reduce) {
 
+
+
     .navo-product-card,
+
     .navo-product-object,
+
     .navo-product-visual-glow,
+
     .navo-product-explore,
+
     .navo-products-collection-link {
 
+
+
         transition:
+
             none;
+
     }
+
 }
 
+
+
 /* =========================================================
-   N∆VO — MOBILE 320px FINAL COMPOSITION
+
+   Nâˆ†VO Ã¢â‚¬â€ MOBILE 320px FINAL COMPOSITION
+
    Target: 320px phones
+
    Desktop / tablet styles remain unchanged.
+
 ========================================================= */
+
+
 
 @media (max-width: 380px) {
 
+
+
     .navo-products-2026 {
+
         padding-top: 88px;
+
         padding-bottom: 50px;
+
     }
+
+
 
     .navo-products-heading,
+
     .navo-products-intro,
+
     .navo-products-grid,
+
     .navo-products-bottom {
+
         width: calc(100% - 24px);
+
     }
+
+
 
     .navo-products-title-row h2 {
+
         font-size: 48px;
+
         line-height: 0.88;
+
     }
+
+
 
     .navo-products-title-row p {
+
         margin-top: 20px;
+
         font-size: 10px;
+
         line-height: 1.45;
+
     }
+
+
 
     .navo-products-intro {
+
         margin-top: 52px;
+
         margin-bottom: 24px;
+
         grid-template-columns: 36px 1fr;
+
         gap: 10px;
+
     }
+
+
 
     .navo-products-intro p {
+
         font-size: 9px;
+
     }
+
+
 
     .navo-products-grid {
+
         gap: 8px;
+
     }
+
+
 
     .navo-product-card,
+
     .navo-product-card-featured {
+
         min-height: 410px;
+
         height: 410px;
+
     }
+
+
 
     .navo-product-visual {
+
         inset: 0;
+
     }
+
+
 
     .navo-product-object {
+
         top: 39%;
+
         width: 220px;
+
         height: 185px;
+
         transform: translate(-50%, -50%) scale(0.58);
+
     }
+
+
 
     .navo-product-card:hover .navo-product-object {
+
         transform: translate(-50%, -50%) translateY(-4px) scale(0.58);
+
     }
+
+
 
     .navo-product-object-air {
+
         transform: translate(-50%, -50%) scale(0.60);
+
     }
+
+
 
     .navo-product-object-loop {
+
         transform: translate(-50%, -50%) scale(0.56);
+
     }
+
+
 
     .navo-product-object-vision {
+
         transform: translate(-50%, -50%) scale(0.56);
+
     }
+
+
 
     .navo-product-object-one {
+
         transform: translate(-50%, -50%) scale(0.54);
+
     }
+
+
 
     .navo-product-orbit-one {
+
         width: 260px;
+
         height: 92px;
+
     }
+
+
 
     .navo-product-orbit-two {
+
         width: 320px;
+
         height: 125px;
+
     }
+
+
 
     .navo-product-information {
+
         left: 14px;
+
         right: 14px;
+
         bottom: 14px;
+
     }
+
+
 
     .navo-product-meta {
+
         gap: 7px;
+
         font-size: 6px;
+
     }
+
+
 
     .navo-product-information h3 {
+
         margin-top: 7px;
+
         font-size: 21px;
+
         line-height: 1;
+
     }
+
+
 
     .navo-product-information p {
+
         max-width: 270px;
+
         margin: 6px 0 9px;
+
         font-size: 8.5px;
+
         line-height: 1.35;
+
     }
+
+
 
     .navo-product-specs {
+
         margin-bottom: 9px;
+
         font-size: 5.8px;
+
         line-height: 1.2;
+
     }
+
+
 
     .navo-product-footer {
+
         gap: 10px;
+
     }
+
+
 
     .navo-product-price {
+
         font-size: 10px;
+
     }
+
+
 
     .navo-product-explore {
+
         min-height: 30px;
+
         padding: 0 10px;
+
         gap: 7px;
+
         font-size: 8px;
+
     }
+
+
 
     .navo-product-coordinate {
+
         top: 14px;
+
         right: 14px;
+
         font-size: 6px;
+
     }
+
+
 
     .navo-product-visual-number {
+
         left: 14px;
+
         top: 15px;
+
         font-size: 8px;
+
     }
 
+
+
     .navo-products-bottom {
+
         margin-top: 38px;
+
         padding-top: 18px;
+
     }
+
 }
 
 
+
+
+
 /* =========================================================
-   N∆VO — REAL PRODUCT IMAGE ALIGNMENT
+
+   Nâˆ†VO Ã¢â‚¬â€ REAL PRODUCT IMAGE ALIGNMENT
+
    STEP 5 / IMAGE COMPOSITION FIX
 
-   The product PNGs already contain their own cinematic
-   background/orbit composition. The CSS below positions and
-   scales the real image as one visual unit instead of sizing
-   the old CSS-built product objects.
+
+
+   Real product PNGs are positioned as complete visual units.
+
+   Desktop composition keeps the product inside the card,
+
+   away from the right edge and bottom clipping.
+
 ========================================================= */
 
+
+
 /* ---------------------------------------------------------
+
    DESKTOP / LAPTOP
+
 --------------------------------------------------------- */
 
+
+
 .navo-product-object {
-    left: 67%;
-    top: 43%;
+
+    position: absolute;
+
+    left: 55%;
+
+    top: 38%;
+
     width: 470px;
+
     height: 430px;
+
     z-index: 3;
 
     display: block;
 
     transform:
+
         translate(-50%, -50%);
+
 }
 
+
+
 .navo-product-object>img {
+
     position: absolute;
+
     left: 0;
+
     top: 0;
 
     width: 100%;
+
     height: 100%;
 
     max-width: none;
 
+    max-height: none;
+
+    display: block;
+
     object-fit: contain;
-    object-position: center;
+
+    object-position: center center;
 
     transform: none;
 
     filter:
+
         drop-shadow(0 30px 45px rgba(0, 0, 0, 0.38));
+
 }
 
-/* Featured 2026 card — give the hero products more breathing room. */
+
+
+/* Featured 2026 card */
+
+
 
 .navo-product-card-featured .navo-product-object {
-    left: 67%;
-    top: 44%;
+
+    left: 55%;
+
+    top: 37%;
+
     width: 520px;
+
     height: 500px;
+
 }
 
-/* Product-specific optical corrections. */
+
+
+/* Nâˆ†VO Air */
+
+
 
 .navo-product-card-air .navo-product-object {
-    left: 67%;
-    top: 44%;
+
+    left: 55%;
+
+    top: 37%;
+
     width: 500px;
+
     height: 470px;
+
 }
+
+
+
+/* Nâˆ†VO Loop / Nâˆ†VO Vision */
+
+
 
 .navo-product-card-loop .navo-product-object,
+
 .navo-product-card-vision .navo-product-object {
-    left: 67%;
-    top: 43%;
+
+    left: 55%;
+
+    top: 40%;
+
     width: 430px;
+
     height: 410px;
+
 }
+
+
+
+/* Nâˆ†VO One */
+
+
 
 .navo-product-card-one .navo-product-object {
-    left: 67%;
-    top: 43%;
+
+    left: 55%;
+
+    top: 40%;
+
     width: 470px;
+
     height: 440px;
+
 }
 
-/* Keep the image from competing with the copy area. */
+
+
+/* Keep product copy clear of the image. */
+
+
 
 .navo-product-card .navo-product-information {
+
     max-width: 48%;
+
 }
+
+
 
 .navo-product-card-featured .navo-product-information {
+
     max-width: 44%;
+
 }
 
-
 /* ---------------------------------------------------------
+
    TABLET
+
 --------------------------------------------------------- */
+
+
 
 @media (max-width: 1024px) {
 
+
+
     .navo-product-object {
+
         left: 67%;
+
         top: 42%;
+
         width: 390px;
+
         height: 370px;
+
     }
+
+
 
     .navo-product-card-featured .navo-product-object {
+
         left: 67%;
+
         top: 43%;
+
         width: 440px;
+
         height: 420px;
+
     }
+
+
 
     .navo-product-card-air .navo-product-object {
+
         width: 425px;
+
         height: 405px;
+
     }
+
+
 
     .navo-product-card-loop .navo-product-object,
+
     .navo-product-card-vision .navo-product-object {
+
         width: 370px;
+
         height: 350px;
+
     }
+
+
 
     .navo-product-card-one .navo-product-object {
+
         width: 390px;
+
         height: 370px;
+
     }
 
+
+
     .navo-product-card .navo-product-information,
+
     .navo-product-card-featured .navo-product-information {
+
         max-width: 50%;
+
     }
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    TABLET PORTRAIT
+
 --------------------------------------------------------- */
+
+
 
 @media (max-width: 820px) {
 
+
+
     .navo-product-object {
+
         left: 66%;
+
         top: 40%;
+
         width: 330px;
+
         height: 315px;
+
     }
+
+
 
     .navo-product-card-featured .navo-product-object {
+
         left: 66%;
+
         top: 41%;
+
         width: 370px;
+
         height: 355px;
+
     }
+
+
 
     .navo-product-card-air .navo-product-object {
+
         width: 355px;
+
         height: 340px;
+
     }
+
+
 
     .navo-product-card-loop .navo-product-object,
+
     .navo-product-card-vision .navo-product-object {
+
         width: 315px;
+
         height: 300px;
+
     }
+
+
 
     .navo-product-card-one .navo-product-object {
+
         width: 330px;
+
         height: 315px;
+
     }
 
+
+
     .navo-product-card .navo-product-information,
+
     .navo-product-card-featured .navo-product-information {
+
         max-width: 52%;
+
     }
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    MOBILE
+
 --------------------------------------------------------- */
+
+
 
 @media (max-width: 640px) {
 
+
+
     .navo-product-object {
+
         left: 50%;
+
         top: 37%;
+
         width: 330px;
+
         height: 310px;
+
     }
+
+
 
     .navo-product-card-featured .navo-product-object,
+
     .navo-product-card-air .navo-product-object,
+
     .navo-product-card-loop .navo-product-object,
+
     .navo-product-card-vision .navo-product-object,
+
     .navo-product-card-one .navo-product-object {
+
         left: 50%;
+
         top: 36%;
+
         width: 330px;
+
         height: 310px;
+
     }
+
+
 
     .navo-product-card .navo-product-information,
+
     .navo-product-card-featured .navo-product-information {
+
         max-width: none;
+
         width: auto;
+
     }
 
+
+
     .navo-product-card .navo-product-information p,
+
     .navo-product-card .navo-product-specs {
+
         max-width: 62%;
+
     }
+
 }
 
 
+
+
+
 /* ---------------------------------------------------------
+
    SMALL MOBILE
+
 --------------------------------------------------------- */
+
+
 
 @media (max-width: 380px) {
 
+
+
     .navo-product-object,
+
     .navo-product-card-featured .navo-product-object,
+
     .navo-product-card-air .navo-product-object,
+
     .navo-product-card-loop .navo-product-object,
+
     .navo-product-card-vision .navo-product-object,
+
     .navo-product-card-one .navo-product-object {
+
         left: 50%;
+
         top: 35%;
+
         width: 285px;
+
         height: 270px;
+
     }
 
+
+
     .navo-product-card .navo-product-information p,
+
     .navo-product-card .navo-product-specs {
+
         max-width: 68%;
+
+    }
+
+}
+
+
+
+/* =========================================================
+
+   Nâˆ†VO VISION Ã¢â‚¬â€ DESKTOP OPTICAL ALIGNMENT
+
+   Move the realistic glasses further into the right zone.
+
+========================================================= */
+
+@media (min-width: 1025px) {
+
+
+
+    .navo-product-card-vision .navo-product-object {
+
+        left: 61%;
+
+        top: 37%;
+
+        width: 410px;
+
+        height: 390px;
+
+    }
+
+
+
+}
+
+/* =========================================================
+   N∆VO — FINAL DESKTOP PRODUCT ALIGNMENT
+   Keep the real product images aligned inside their visual zones.
+   Mobile/tablet composition remains unchanged.
+========================================================= */
+
+@media (min-width: 1025px) {
+
+    /* Featured N∆VO Air */
+    .navo-product-card-featured .navo-product-object,
+    .navo-product-card-air .navo-product-object {
+        left: 72%;
+        top: 52%;
+        width: 500px;
+        height: 480px;
+        transform: translate(-50%, -50%);
+    }
+
+    /* N∆VO Loop */
+    .navo-product-card-loop .navo-product-object {
+        left: 72%;
+        top: 50%;
+        width: 390px;
+        height: 375px;
+        transform: translate(-50%, -50%);
+    }
+
+    /* N∆VO Vision */
+    .navo-product-card-vision .navo-product-object {
+        left: 72%;
+        top: 50%;
+        width: 390px;
+        height: 375px;
+        transform: translate(-50%, -50%);
+    }
+
+    /* N∆VO One */
+    .navo-product-card-one .navo-product-object {
+        left: 72%;
+        top: 50%;
+        width: 410px;
+        height: 395px;
+        transform: translate(-50%, -50%);
+    }
+
+    .navo-product-card-featured .navo-product-object>img,
+    .navo-product-card-air .navo-product-object>img,
+    .navo-product-card-loop .navo-product-object>img,
+    .navo-product-card-vision .navo-product-object>img,
+    .navo-product-card-one .navo-product-object>img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .navo-product-card:hover .navo-product-object {
+        transform: translate(-50%, -50%) translateY(-6px);
     }
 }
 
 /* =========================================================
-   N∆VO VISION — DESKTOP OPTICAL ALIGNMENT
-   Move the realistic glasses further into the right zone.
+   N∆VO — PRODUCT IMAGE ALIGNMENT (transform-free)
+   Positions images with top/right/bottom/left + object-fit,
+   so nothing can push them out of the card.
 ========================================================= */
-@media (min-width: 1025px) {
 
-    .navo-product-card-vision .navo-product-object {
-        left: 61%;
-        top: 37%;
-        width: 410px;
-        height: 390px;
+@media (min-width: 641px) {
+
+    /* reset: no transform / translate-based centering */
+    .navo-products-2026 .navo-product-card .navo-product-object {
+        position: absolute;
+        transform: none;
+        translate: none;
+        display: block;
+        z-index: 3;
     }
 
+    .navo-products-2026 .navo-product-card .navo-product-object>img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        object-fit: contain;
+        object-position: center;
+        transform: none;
+    }
+
+    /* ---- Featured Air card: image in the right zone ---- */
+    .navo-products-2026 .navo-product-card-featured .navo-product-object,
+    .navo-products-2026 .navo-product-card-air .navo-product-object {
+        left: auto;
+        right: 4%;
+        top: 7%;
+        bottom: 7%;
+        width: 48%;
+        height: auto;
+    }
+
+    /* ---- Loop / Vision / One: image centered above the text ---- */
+    .navo-products-2026 .navo-product-card-loop .navo-product-object,
+    .navo-products-2026 .navo-product-card-vision .navo-product-object,
+    .navo-products-2026 .navo-product-card-one .navo-product-object {
+        left: 8%;
+        right: 8%;
+        top: 44px;
+        bottom: auto;
+        width: auto;
+        height: 300px;
+    }
+
+    /* text can use the full card width again on small cards */
+    .navo-products-2026 .navo-product-card-loop .navo-product-information,
+    .navo-products-2026 .navo-product-card-vision .navo-product-information,
+    .navo-products-2026 .navo-product-card-one .navo-product-information {
+        max-width: none;
+    }
+
+    /* keep the featured card's copy clear of the image */
+    .navo-products-2026 .navo-product-card-featured .navo-product-information {
+        max-width: 44%;
+    }
+
+    /* hover lift (translateY only, no centering transform) */
+    .navo-products-2026 .navo-product-card:hover .navo-product-object {
+        transform: translateY(-6px);
+    }
+}
+
+/* =========================================================
+   N∆VO — MOBILE PRODUCT IMAGE ALIGNMENT (transform-free)
+   Covers 425 / 375 / 320 and anything up to 640px.
+   Inline `transform: none` from the animation lib broke the
+   translate(-50%,-50%) centering, so we don't use transforms.
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .navo-products-2026 .navo-product-card .navo-product-object,
+    .navo-products-2026 .navo-product-card-featured .navo-product-object,
+    .navo-products-2026 .navo-product-card-air .navo-product-object,
+    .navo-products-2026 .navo-product-card-loop .navo-product-object,
+    .navo-products-2026 .navo-product-card-vision .navo-product-object,
+    .navo-products-2026 .navo-product-card-one .navo-product-object {
+        position: absolute !important;
+        left: 6% !important;
+        right: 6% !important;
+        top: 44px !important;
+        bottom: auto !important;
+        width: auto !important;
+        height: 215px !important;
+        transform: none !important;
+        translate: none !important;
+        scale: none !important;
+        display: block;
+        z-index: 3;
+    }
+
+    .navo-products-2026 .navo-product-card .navo-product-object>img {
+        position: absolute !important;
+        inset: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+        object-fit: contain;
+        object-position: center;
+        transform: none !important;
+    }
+
+    /* text now sits under the image, so it can use full width */
+    .navo-products-2026 .navo-product-card .navo-product-information p,
+    .navo-products-2026 .navo-product-card .navo-product-specs {
+        max-width: 100% !important;
+    }
+
+    .navo-products-2026 .navo-product-card:hover .navo-product-object {
+        transform: translateY(-4px) !important;
+    }
+}
+
+/* Small phones (320px / 375px) — shorter cards, smaller image zone */
+@media (max-width: 380px) {
+
+    .navo-products-2026 .navo-product-card .navo-product-object,
+    .navo-products-2026 .navo-product-card-featured .navo-product-object,
+    .navo-products-2026 .navo-product-card-air .navo-product-object,
+    .navo-products-2026 .navo-product-card-loop .navo-product-object,
+    .navo-products-2026 .navo-product-card-vision .navo-product-object,
+    .navo-products-2026 .navo-product-card-one .navo-product-object {
+        top: 38px !important;
+        height: 170px !important;
+        left: 4% !important;
+        right: 4% !important;
+    }
 }
